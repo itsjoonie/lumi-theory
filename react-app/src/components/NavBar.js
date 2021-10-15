@@ -21,13 +21,19 @@ const NavBar = () => {
       <div className="navBar-container">
         <div>
           {/* dropdown menu */}
-          <i class="fas fa-user"></i>
+          <i class="fas fa-bars"></i>
         </div>
         <div>
           {/* search bar */}
         </div>
         <div>
           <h1 className="company-name">Lumi Theory Co.</h1>
+        </div>
+        <div>
+          <button>Login</button>
+        </div>
+        <div>
+          <button>Sign Up</button>
         </div>
       </div>
 
