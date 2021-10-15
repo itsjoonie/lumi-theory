@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap');
-/* font-family: 'WindSong', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+/* font-family: 'WindSong', cursive; 
+font-family: 'News Cycle', sans-serif;*/
 
 
 .navBar{
@@ -51,9 +53,37 @@
 
 .nav-menu-bars{
     margin-left: 5px;
-   
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
+
+.dropdown-links{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 0.1em;
+
+}
+
+.dropdown-links:hover {
+    background-color: #ccdad1ce;
+    font-weight: bold;
+} 
+.nav-menu-bars:hover .dropdown-content {display: block;}
+.fa-bars:hover {
+    color: #CCDAD1;
+}
 
 
 .logo{
