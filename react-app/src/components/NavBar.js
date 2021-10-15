@@ -22,6 +22,13 @@ const NavBar = () => {
         <div className="nav-menu-bars">
           {/* dropdown menu */}
             <i className="fas fa-bars"></i>
+            <div class="dropdown-content">
+              <NavLink to="#">Home</NavLink>
+              <NavLink to="#">Shop</NavLink>
+              <NavLink to="#">Events</NavLink>
+              <NavLink to="#">Our Story</NavLink>
+              <NavLink to="#">Contact Us</NavLink>
+            </div>
         </div>
         <div className="nav-search">
           <i class="fas fa-search"></i>
