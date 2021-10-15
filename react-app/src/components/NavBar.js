@@ -19,22 +19,28 @@ const NavBar = () => {
       </div>
 
       <div className="navBar-container">
-        <div>
+        <div className="nav-menu-bars">
           {/* dropdown menu */}
-          <i class="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>
         </div>
-        <div>
-          {/* search bar */}
+        <div className="nav-search">
+          <i class="fas fa-search"></i>
         </div>
-        <div>
-          <h1 className="company-name">Lumi Theory Co.</h1>
+        <div className="logo">
+            <h1 className="company-name">Lumi Theory Co.</h1>
         </div>
-        <div>
-          <button>Login</button>
+        <div className="nav-user">
+            <i className="fas fa-user"></i>
         </div>
-        <div>
-          <button>Sign Up</button>
+        <div className="nav-heart-shop">
+            <div className="nav-heart">
+                <i class="far fa-heart"></i>
+            </div>
+            <div className="nav-shopping-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
         </div>
+    
       </div>
 
     </div>
