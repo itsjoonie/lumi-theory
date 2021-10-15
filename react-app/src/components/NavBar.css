@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap');
+/* font-family: 'WindSong', cursive; */
+
+
+.navBar{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.marquee-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.marquee {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.marquee span {
+    font-size: 0.9rem;
+    padding-left: 100%;
+    display: inline-block;
+    letter-spacing: .15rem;
+    word-spacing: .2rem;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+
+.company-name{
+    font-family: 'WindSong', cursive; 
+
+
+}
