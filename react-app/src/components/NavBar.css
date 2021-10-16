@@ -92,10 +92,12 @@ font-family: 'Inconsolata', monospace;*/
     box-sizing: border-box;
     width: 76%;
     margin-left: 10px;
+    padding-left: 43px;
 }
 
 .company-name{
     font-family: 'WindSong', cursive; 
+    font-size: 2.05rem;
     color: white;
     text-align: center;
 }

@@ -10,7 +10,7 @@ function LandingPage(){
                         <h2 className="banner-one-content-h2">Scented Candles</h2>
                         <p className="banner-one-content-p" id="id-banner1">Our products are artisanally made with</p>
                         <p className="banner-one-content-p" >passion, eco-friendly and high-quality ingredients</p>
-                        <button className="banner1-btn">SHOP NOW</button>
+                        <button className="banner1-btn btn1">SHOP NOW</button>
                     </div>
                 </div>
             </div>
