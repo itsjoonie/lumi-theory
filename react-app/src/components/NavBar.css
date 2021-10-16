@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 /* font-family: 'WindSong', cursive; 
-font-family: 'News Cycle', sans-serif;*/
+font-family: 'News Cycle', sans-serif;
+font-family: 'Inconsolata', monospace;*/
 
 
 .navBar{
@@ -101,6 +103,7 @@ font-family: 'News Cycle', sans-serif;*/
 .nav-heart-shop{
     display: flex;
     flex-direction: row;
+    margin-right: 5px;
 }
 
 .nav-heart{
@@ -113,4 +116,9 @@ font-family: 'News Cycle', sans-serif;*/
 .fa-shopping-cart,
 .fa-heart{
     color: white;
+}
+
+.fa-shopping-cart span{
+    font-family: 'Inconsolata', monospace;
+    font-size: small;
 }

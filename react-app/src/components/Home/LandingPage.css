@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* font-family: 'Delius Unicase', cursive;
+font-family: 'Inconsolata', monospace; 
+font-family: 'Playfair Display', serif;*/
+
+
+
+/* banner 1 */
+.landing-banner-one{
+    background-image: url("./image/banner1.jpg");
+    width: 100%;
+    min-height: 680px;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-banner-one div{
+    background-color: rgba(0, 0, 0, 0.788);
+    width: 540px;
+    height: 420px;
+
+}
+
+.banner-one-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.banner-one-content-h2,
+.banner-one-content-p {
+    color: white;
+    margin-bottom: 3px;
+}
+
+#id-banner1{
+    margin-top: 15px;
+}
+
+.banner-one-content-h2{
+    font-family: 'Playfair Display', serif;
+}
+
+.banner-one-content-p{
+    font-family: 'Inconsolata', monospace; 
+}
+
+.banner1-btn{
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    border: 1px solid white;
+    margin-top: 30px;
+
+    height: 40px;
+    width: 100px;
+}
+
+/* banner 1 end */

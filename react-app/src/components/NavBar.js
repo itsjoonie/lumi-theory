@@ -44,7 +44,7 @@ const NavBar = () => {
                 <i class="far fa-heart"></i>
             </div>
             <div className="nav-shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart"><span>(0)</span></i>
             </div>
         </div>
     

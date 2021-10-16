@@ -8,6 +8,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
+import LandingPage from './components/Home/LandingPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -40,9 +41,9 @@ function App() {
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <h1>LUMI THEORY HOME PAGE</h1>
-        </ProtectedRoute>
+        <Route path='/' exact={true} >
+          <LandingPage/>
+        </Route>
       </Switch>
     </BrowserRouter>
   );
