@@ -41,6 +41,12 @@ function LandingPage(){
                     </div>
                 </div>
             </div>
+            <div className="landing-banner-three">
+                <div>
+                    <img src="./image/banner3" alt="pic"/>
+                </div>
+
+            </div>
         </div>
     )
 }

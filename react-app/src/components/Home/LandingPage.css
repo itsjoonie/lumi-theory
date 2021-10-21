@@ -103,7 +103,7 @@ font-family: 'Playfair Display', serif;*/
 /* banner 2 */
 .landing-banner-two{
     background-color: #d0af5af9;
-    height: 150px;
+    height: 140px;
 }
 
 .banner-two-container{
@@ -118,6 +118,9 @@ font-family: 'Playfair Display', serif;*/
     text-align: center;
 }
 
+.banner-two-content p{
+    
+}
 .banner-two-img{
     filter: invert(94%) sepia(0%) saturate(25%) hue-rotate(350deg) brightness(102%) contrast(111%);
     width: 45px;
