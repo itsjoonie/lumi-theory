@@ -42,8 +42,27 @@ function LandingPage(){
                 </div>
             </div>
             <div className="landing-banner-three">
+                <div className="banner-3-container">
+                    <div>
+                    <img className="banner-three-img" src="https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/src/components/Home/image/banner3.jpg?token=AQLSLSHEYZ6CTOCI6CVOBMDBPH64K" alt="pic"/>
+                    </div>
+                    <div className="aboutUs">
+                        <h1>About Us</h1>
+                        <p id="p1">
+                            Lumi Theory is created by a Software Engineer and an Artist with a genuine love for subtle and calming scent.
+                            It was created during the early beginning of the pandemic to symbolize hope.  
+                            When there are darkness, then light shines the brightest. 
+                        </p>
+                        <p className="aboutUs-p">
+                            We hand poured & personally crafted our candles in small batches for our friends and families.
+                        </p>
+                        <p className="aboutUs-p">
+                            We hope our products give you happiness as it does to us.
+                        </p>
+                    </div>
+                </div>
                 <div>
-                    <img src="./image/banner3" alt="pic"/>
+                    <h1>Seasonal Scents</h1>
                 </div>
 
             </div>

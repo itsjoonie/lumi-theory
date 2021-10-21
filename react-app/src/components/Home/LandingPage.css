@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Inconsolata:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 /* font-family: 'Delius Unicase', cursive;
 font-family: 'Inconsolata', monospace; 
-font-family: 'Playfair Display', serif;*/
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif;*/
 
 .landing-banner-one,
-.landing-banner-two {
+.landing-banner-two,
+.landing-banner-three {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -125,5 +129,54 @@ font-family: 'Playfair Display', serif;*/
     filter: invert(94%) sepia(0%) saturate(25%) hue-rotate(350deg) brightness(102%) contrast(111%);
     width: 45px;
     height: 45px;
+}
+
+/* banner 2 end */
+
+
+/* banner 3 */
+.banner-3-container{
+    width: 97%;
+    background-color: black;
+    margin-top: 20px;
+    height: 450px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-three-img{
+    width: 440px;
+    height: 390px;
+}
+
+.aboutUs{
+    margin-left: 20px;
+}
+
+.aboutUs h1,
+.aboutUs p{
+    color: white;
+}
+
+.aboutUs h1{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.aboutUs p{
+    padding-left: 40px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.04rem;
+    word-spacing: 0.015rem;
+}
+
+#p1 {
+    margin-bottom: 10px;
+}
+
+.aboutUs-p{
+    margin-top: 10px;
 }
 
