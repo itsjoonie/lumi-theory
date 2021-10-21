@@ -12,6 +12,33 @@ function LandingPage(){
                         <p className="banner-one-content-p" >passion, eco-friendly and high-quality ingredients</p>
                         <button className="banner1-btn btn1">SHOP NOW</button>
                     </div>
+                
+
+                </div>
+            </div>
+            <div className="landing-banner-two">
+                <div className="banner-two-container">
+                    <div className="banner-two-content">
+                        <img className="banner-two-img" src="https://img.icons8.com/dotty/80/000000/warranty.png" alt="pic"/>
+                        <h4>Premium Quality</h4>
+                        <p>We ensure each product meets our high standards.</p>
+                    </div>
+                    <div className="banner-two-content">
+                        <img className="banner-two-img" src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-eco-light-ecology-justicon-lineal-justicon.png" alt="pic"/>
+                        <h4>Eco Friendly</h4>
+                        <p>Made from Eco-friendly and non-toxic materials.</p>
+                    </div>
+                    <div className="banner-two-content">
+                        <img className="banner-two-img" src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/000000/external-hand-world-pride-day-wanicon-lineal-wanicon.png" alt="pic"/>
+                        <h4>Hand Poured</h4>
+                        <p>Carefully hand poured using high-quality ingredients.</p>
+
+                    </div>
+                    <div className="banner-two-content">
+                        <img className="banner-two-img" src="https://img.icons8.com/dotty/80/000000/time.png" alt="pic"/>
+                        <h4>Long Burn Time</h4>
+                        <p>Long consistent burn times, over 40+ hours!</p>
+                    </div>
                 </div>
             </div>
         </div>

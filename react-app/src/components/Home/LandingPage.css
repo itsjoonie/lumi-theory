@@ -4,7 +4,12 @@
 font-family: 'Inconsolata', monospace; 
 font-family: 'Playfair Display', serif;*/
 
-
+.landing-banner-one,
+.landing-banner-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* banner 1 */
 .landing-banner-one{
@@ -13,10 +18,6 @@ font-family: 'Playfair Display', serif;*/
     min-height: 680px;
     background-size: cover;
     background-position: center center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .landing-banner-one div{
@@ -96,8 +97,30 @@ font-family: 'Playfair Display', serif;*/
     left: 100%;
 }
 
-
-
-
-
 /* banner 1 end */
+
+
+/* banner 2 */
+.landing-banner-two{
+    background-color: #d0af5af9;
+    height: 150px;
+}
+
+.banner-two-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.banner-two-content{
+    width: 200px;
+    text-align: center;
+}
+
+.banner-two-img{
+    filter: invert(94%) sepia(0%) saturate(25%) hue-rotate(350deg) brightness(102%) contrast(111%);
+    width: 45px;
+    height: 45px;
+}
+
