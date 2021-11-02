@@ -50,8 +50,8 @@ function LandingPage(){
                         <h1>About Us</h1>
                         <p id="p1">
                             Lumi Theory is created by a Software Engineer and an Artist with a genuine love for subtle and calming scent.
-                            It was created during the early beginning of the pandemic to symbolize hope.  
-                            When there are darkness, then light shines the brightest. 
+                            <br/>It was created during the early beginning of the pandemic to symbolize hope.  
+                            We had in mind that when there are darkness, then light shines the brightest. 
                         </p>
                         <p className="aboutUs-p">
                             We hand poured & personally crafted our candles in small batches for our friends and families.
