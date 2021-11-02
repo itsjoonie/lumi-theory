@@ -44,7 +44,7 @@ function LandingPage(){
             <div className="landing-banner-three">
                 <div className="banner-3-container">
                     <div>
-                    <img className="banner-three-img" src="./banner2.JPG" alt="pic"/>
+                    <img className="banner-three-img" src="https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/src/components/Home/image/banner2.JPG?token=AQLSLSCJQVSLXPRS77R4QIDBRIOQI" alt="pic"/>
                     </div>
                     <div className="aboutUs">
                         <h1>About Us</h1>
