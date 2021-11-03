@@ -10,6 +10,7 @@ font-family: 'Inconsolata', monospace;*/
     display: flex;
     flex-direction: column;
     background-color: black;
+    height: 140px;
 }
 
 /* marquee: scrolling banner */
@@ -46,7 +47,7 @@ font-family: 'Inconsolata', monospace;*/
 /* actual navbar */
 
 .navBar-container{
-    margin: 20px 0 10px 0;
+    margin: 45px 0 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -82,7 +83,10 @@ font-family: 'Inconsolata', monospace;*/
     background-color: #ccdad1ce;
     font-weight: bold;
 } 
-.nav-menu-bars:hover .dropdown-content {display: block;}
+.nav-menu-bars:hover .dropdown-content {
+    display: block;
+}
+
 .fa-bars:hover {
     color: #CCDAD1;
 }
@@ -96,8 +100,9 @@ font-family: 'Inconsolata', monospace;*/
 }
 
 .company-name{
+    box-sizing: border-box;
     font-family: 'WindSong', cursive; 
-    font-size: 2.05rem;
+    font-size: 2.55rem;
     color: white;
     text-align: center;
 }
