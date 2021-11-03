@@ -21,6 +21,7 @@ font-family: 'Raleway', sans-serif;*/
     width: 100%;
     min-height: 680px;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
 }
 
@@ -153,6 +154,11 @@ font-family: 'Raleway', sans-serif;*/
 
 .aboutUs{
     margin-left: 20px;
+}
+
+.aboutUs h1{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.2rem;
 }
 
 .aboutUs h1,
