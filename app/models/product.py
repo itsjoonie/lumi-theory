@@ -12,6 +12,8 @@ class Product(db.Model):
     description = db.Column(db.Text, nullable=False)
     price = db.Column(db.Numeric, nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
+    seasonal = db.Column(db.Boolean)
+    special = db.Column(db.Boolean)
     pic1 = db.Column(db.Text, nullable=False)
     pic2 = db.Column(db.Text)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
@@ -27,6 +29,8 @@ class Product(db.Model):
             'description': self.description,
             'price': self.price,
             'quantity': self.quantity,
+            'seasonal': self.seasonal,
+            'special': self.special,
             'pic1': self.pic1,
             'pic2': self.pic2
         }
