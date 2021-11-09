@@ -13,8 +13,8 @@ class Review(db.Model):
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
 
-    user_relation = db.relationship('User', back_populate='review_relation', lazy =True )
-    product_relation = db.relationship('Product', back_populate='review_relation', lazy=True)
+    user_relation = db.relationship('User', back_populates='review_relation', lazy =True )
+    product_relation = db.relationship('Product', back_populates='review_relation', lazy=True)
 
     def to_dict(self):
         return {
