@@ -7,7 +7,7 @@ class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'), nullable=False)
-    title = db.Column (db.String(50))
+    title = db.Column (db.String(250))
     rating = db.Column(db.Numeric, nullable=False)
     body = db.Column(db.Text)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
