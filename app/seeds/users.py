@@ -28,8 +28,7 @@ def seed_users():
         first_name='Chuck',
         last_name='Chee',
         email='chuck@aa.io'
-    )
-    
+    )   
 
     db.session.add(demo)
     db.session.add(marnie)
