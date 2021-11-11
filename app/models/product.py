@@ -10,7 +10,7 @@ class Product(db.Model):
     base_scent = db.Column(db.String, nullable=False)
     lid_color = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
-    price = db.Column(db.Numeric, nullable=False)
+    price = db.Column(db.Numeric(10,2), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     seasonal = db.Column(db.Boolean)
     special = db.Column(db.Boolean)
@@ -18,6 +18,8 @@ class Product(db.Model):
     pic2 = db.Column(db.Text)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
+
+    review_relation = db.relationship('Review', back_populates="product_relation", lazy=True, cascade="all, delete")
 
     def to_dict(self):
         return{

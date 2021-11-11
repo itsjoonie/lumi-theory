@@ -6,29 +6,35 @@ def seed_users():
     demo = User(
         first_name='Demo',
         last_name='Lition',
-        email='demo@aa.io', password='password')
+        email='demo@aa.io',
+        password='password')
     marnie = User(
         first_name='Marnie',
         last_name='Woo',
-        email='marnie@aa.io', password='password')
+        email='marnie@aa.io',
+        password='password')
     bobbie = User(
         first_name='Bobbie',
         last_name='Smith',
-        email='bobbie@aa.io', password='password')
+        email='bobbie@aa.io',
+        password='password')
     steph = User(
         first_name='Stephanie',
         last_name='Vargas',
-        email='steph@aa.io', password='password')
+        email='steph@aa.io',
+        password='password')
     katie = User(
         first_name='Katie',
         last_name='Muck',
-        email='katie@aa.io', password='password'
+        email='katie@aa.io',
+        password='password'
     )
     chuck = User(
         first_name='Chuck',
         last_name='Chee',
-        email='chuck@aa.io'
-    )   
+        email='chuck@aa.io',
+        password='password'
+    )
 
     db.session.add(demo)
     db.session.add(marnie)
