@@ -10,7 +10,7 @@ class Product(db.Model):
     base_scent = db.Column(db.String, nullable=False)
     lid_color = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
-    price = db.Column(db.Numeric(10,2), nullable=False)
+    price = db.Column(db.Numeric(precision=10, scale=2, asdecimal=False), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     seasonal = db.Column(db.Boolean)
     special = db.Column(db.Boolean)
