@@ -10,5 +10,3 @@ product_routes = Blueprint('products', __name__)
 def all_products():
     products = Product.query.all()
     return {product.to_dict()['id']: product.to_dict() for product in products}
-    # products = Product.query.all()
-    # return {'products': [product.to_dict() for product in products]}
