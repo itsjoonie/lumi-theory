@@ -8,25 +8,31 @@ function ProductsPage (){
     console.log(products, "WTHAT IS THIS PRODUCTS")
     return (
         <div className='productsPages'>
-            {/* banners  maybe*/}
-            {/* products page sidebar */}
-
-            <div className='products-item-container'>
-                <div className='products-item-square'>
-                    {products?.map(oneProduct =>(<div key={oneProduct.id} className='products-item-content'>
-                        <div className='products-item-card'>
-                            <img className='products-item-pic' src={oneProduct.pic1} alt='pic'/>
-                            <h2>{oneProduct.name}</h2>
-                            <p><span>$</span>{oneProduct.price}.00</p>
-
-                        </div>
-                    
-                    </div>
-                    ))}
-
+            <div className="productsPages-main">
+                <div>
+                {/* products page sidebar */}
+                    <h2> Sidebar Here</h2>
                 </div>
 
+                <div className='products-item-container'>
+                    {/* banners  maybe*/}
+                    {/* products page sidebar */}
+                    <div className='products-item-square'>
+                        {products?.map(oneProduct =>(<div key={oneProduct.id} className='products-item-card'>
+                            <div className='products-item-content'>
+                                <img className='products-item-img' src={oneProduct.pic1} alt='pic'/>
+                                <h2>{oneProduct.name}</h2>
+                                <p><span>$</span>{oneProduct.price}.00</p>
 
+                            </div>
+                        
+                        </div>
+                        ))}
+
+                    </div>
+
+
+                </div>
             </div>
          
         </div>
