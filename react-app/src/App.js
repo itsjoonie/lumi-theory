@@ -8,7 +8,9 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
+import * as productsAction from './store/product'
 import LandingPage from './components/Home/LandingPage';
+import ProductsPage from './components/Products/ProductsPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -17,6 +19,7 @@ function App() {
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
+      await dispatch(productsAction.getAllProducts())
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -43,6 +46,9 @@ function App() {
         </ProtectedRoute>
         <Route path='/' exact={true} >
           <LandingPage/>
+        </Route>
+        <Route path='/all/products' exact={true}>
+          <ProductsPage/>
         </Route>
       </Switch>
     </BrowserRouter>
