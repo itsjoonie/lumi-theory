@@ -10,6 +10,9 @@
     justify-content: space-around;
 }
 
+.products-item-container{
+    width: 70%;
+}
 
 .products-item-img{
     height: 16rem;
@@ -41,6 +44,14 @@
     .products-item-square{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+  
+    }
+}
+
+@media only screen and (min-width: 1800px){
+    .products-item-square{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
   
     }
 }

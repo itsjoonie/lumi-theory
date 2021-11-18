@@ -9,7 +9,7 @@ function ProductsPage (){
     return (
         <div className='productsPages'>
             <div className="productsPages-main">
-                <div>
+                <div className='productpage-sidebar'>
                 {/* products page sidebar */}
                     <h2> Sidebar Here</h2>
                 </div>
