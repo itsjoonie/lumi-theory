@@ -16,17 +16,13 @@
 
 .products-item-img{
     height: 16rem;
-    width: 17rem;
+    width: 18rem;
+    object-fit: cover
 }
 
 .products-item-square{
     display: grid;
     grid-gap: 16px;
-    
-  
- 
-
-
 }
 
 .products-item-content{
@@ -36,26 +32,27 @@
 @media only screen and (min-width: 992px){
     .products-item-square{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 0.7fr repeat(2, 1fr);
         
     }
 }
 @media only screen and (min-width: 1200px){
     .products-item-square{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 0.7fr repeat(3, 1fr);
   
     }
 }
 
-@media only screen and (min-width: 1800px){
+@media only screen and (min-width: 2000px){
     .products-item-square{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 0.7fr repeat(3, 1fr);
   
     }
 }
 .products-item-card{
-
-    
+    width: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.66);
+        
 }
