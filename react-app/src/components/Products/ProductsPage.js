@@ -33,6 +33,11 @@ function ProductsPage (){
 
 
                 </div>
+                <div>
+                    <h1>Twst</h1> 
+                    <img src='/images/cozy.jpg' alt='pic'/>
+
+                </div>
             </div>
          
         </div>

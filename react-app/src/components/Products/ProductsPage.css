@@ -23,13 +23,14 @@
 .products-item-square{
     display: grid;
     grid-gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .products-item-content{
 
 }
 
-@media only screen and (min-width: 992px){
+/* @media only screen and (min-width: 992px){
     .products-item-square{
         display: grid;
         grid-template-columns: 0.7fr repeat(2, 1fr);
@@ -50,7 +51,7 @@
         grid-template-columns: 0.7fr repeat(3, 1fr);
   
     }
-}
+} */
 .products-item-card{
     width: inherit;
     border: 1px solid rgba(0, 0, 0, 0.66);
