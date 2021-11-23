@@ -11,7 +11,7 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/night_owl.jpg?token=AQLSLSGIEF265AKNI52EZA3BSXPI2',
+        pic1 = '/images/night_owl.jpg',
     )
     deja_brew = Product (
         name = 'Deja Brew',
@@ -23,7 +23,7 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/deja_brew.jpg?token=AQLSLSANBXSDZVQOKGHSNBDBSXPKG',
+        pic1 = '/images/deja_brew.jpg',
     )
     hidden_page = Product (
         name = 'Hidden Page',
@@ -35,7 +35,7 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/hidden_page.jpg?token=AQLSLSCXWNRJTG5BCNMJ27TBSXLMO'
+        pic1 = '/images/hidden_page.jpg'
     )
     starlight = Product (
         name = 'Starlight',
@@ -47,8 +47,8 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = True,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/starlight.jpg?token=AQLSLSBGOBKTZDISUN7W2NTBSXLGW',
-        pic2 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/starlight2.jpg?token=AQLSLSHY3NUYIQXL566X7XDBSXLIC'
+        pic1 = '/images/starlight.jpg',
+        pic2 = '/images/starlight2.jpg'
     )
     sea_the_good = Product (
         name = 'Sea the Good',
@@ -60,7 +60,7 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/sea_the_good.jpg?token=AQLSLSHGVFPITTUZLXSGWC3BSXLXI',
+        pic1 = '/images/sea_the_good.jpg',
     )
     manifestation = Product (
         name = 'Manifestation',
@@ -72,8 +72,8 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = True,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/manifestation.jpg?token=AQLSLSH25EAESGARTU55ZTTBSXL5E',
-        pic2 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/manifestation2.jpg?token=AQLSLSH6NFIZQA62XEMAN5TBSXL5S',
+        pic1 = '/images/manifestation.jpg',
+        pic2 = '/images/manifestation2.jpg',
     )
     me_time = Product (
         name = 'Me Time',
@@ -85,8 +85,8 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = True,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/me_time.jpg?token=AQLSLSBK2AGP7IEKLOFWHQDBSXMLA',
-        pic2 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/me_time2.jpg?token=AQLSLSBEQOYSQXXGCQPTDE3BSXMLG'
+        pic1 = '/images/me_time.jpg',
+        pic2 = '/images/me_time2.jpg'
     )
     pumpkin_season = Product (
         name = 'Pumpkin Season',
@@ -98,7 +98,7 @@ def seed_products():
         quantity = 5,
         seasonal = True,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/pumpkin_season.jpg?token=AQLSLSB42UTBX23RADWZ5J3BSXMZ4'
+        pic1 = '/images/pumpkin_season.jpg'
     )
     witchin_life = Product (
         name = 'Witchin\' Life',
@@ -110,7 +110,7 @@ def seed_products():
         quantity = 5,
         seasonal = True,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/witchin_life.jpg?token=AQLSLSGNOAAZVRA7QKNZ5WTBSXNIG'
+        pic1 = '/images/witchin_life.jpg'
     )
     cozy = Product (
         name = 'Cozy n\' Toasy',
@@ -122,7 +122,7 @@ def seed_products():
         quantity = 5, 
         seasonal = True,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/cozy.jpg?token=AQLSLSCQ7TP4K4CIB5G5PQDBSXNOK',
+        pic1 = '/images/cozy.jpg',
     )
     autumn_mood = Product (
         name = 'Autumn Mood',
@@ -134,7 +134,7 @@ def seed_products():
         quantity = 5,
         seasonal = True,
         special = False,
-        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/images/autumn_mood.jpg?token=AQLSLSAK2I4IQD656OTCNA3BSXPES'
+        pic1 = '/images/autumn_mood.jpg'
     )
 
     db.session.add(night_owl)
@@ -154,5 +154,5 @@ def seed_products():
 
 # Remove all data from table and reset Identity
 def undo_products():
-    db.session.execute('TRUNCATE products RESTART IDENTITY CASCASE;')
+    db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
     db.session.commit()
