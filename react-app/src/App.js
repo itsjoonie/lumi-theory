@@ -13,6 +13,7 @@ import * as reviewsAction from './store/review'
 import LandingPage from './components/Home/LandingPage';
 import ProductsPage from './components/Products/ProductsPage';
 import ReviewSection from './components/Reviews/ReviewSection';
+import IndividualProductPage from './components/Products/IndividualProductPage';
 
 
 function App() {
@@ -54,8 +55,8 @@ function App() {
         <Route path='/all/products' exact={true}>
           <ProductsPage/>
         </Route>
-        <Route path='/testing' exact={true}>
-          <ReviewSection/>
+        <Route path='/product/:id' exact={true}>
+          <IndividualProductPage/>
         </Route>
       </Switch>
     </BrowserRouter>

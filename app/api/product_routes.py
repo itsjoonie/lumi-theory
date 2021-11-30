@@ -10,3 +10,8 @@ product_routes = Blueprint('products', __name__)
 def all_products():
     products = Product.query.all()
     return {product.to_dict()['id']: product.to_dict() for product in products}
+
+@product_routes.route('/<int:id>', methods=['GET'])
+def one_product(id):
+    product = Product.query.get(id)
+    return product.to_dict()

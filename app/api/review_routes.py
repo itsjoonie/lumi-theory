@@ -10,3 +10,4 @@ review_routes = Blueprint('reviews', __name__)
 def all_reviews():
     reviews = Review.query.all()
     return {review.to_dict()['id']:review.to_dict() for review in reviews}
+

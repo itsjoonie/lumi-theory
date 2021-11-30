@@ -1,8 +1,15 @@
 const LOAD_PRODUCTS = 'products/LOAD_PRODUCTS';
 
+const LOAD_PRODUCT = 'products/LOAD_PRODUCT'
+
 const loadProducts = (products) => ({
     type: LOAD_PRODUCTS,
     products
+})
+
+const loadOneProduct = (product) => ({
+    type: LOAD_PRODUCT,
+    product
 })
 
 export const getAllProducts = () => async (dispatch) =>{
@@ -11,10 +18,22 @@ export const getAllProducts = () => async (dispatch) =>{
     if(response.ok){
     const data = await response.json()
     dispatch(loadProducts(data))
-    } else{
+    } else {
         return 'error'
     }
 }
+
+// export const getOneProduct =(id) => async (dispatch) => {
+//     const res = await fetch (`api/products/${id}`)
+
+//     if(res.ok){
+//         const data = await res.json()
+//         dispatch(loadOneProduct(data))
+//     } else {
+//         return 'error'
+//     }
+// }
+
 
 const initialState ={};
 
