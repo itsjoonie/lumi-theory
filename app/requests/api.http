@@ -1,5 +1,9 @@
 ### Get All Products
 
-GET http://127.0.0.1:5000/api/products
+# GET http://127.0.0.1:5000/api/products
+# Content-Type: application/json
+
+GET http://127.0.0.1:5000/api/reviews
 Content-Type: application/json
+
 

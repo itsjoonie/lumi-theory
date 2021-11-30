@@ -9,8 +9,11 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
 import * as productsAction from './store/product'
+import * as reviewsAction from './store/review'
 import LandingPage from './components/Home/LandingPage';
 import ProductsPage from './components/Products/ProductsPage';
+import ReviewSection from './components/Reviews/ReviewSection';
+
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -19,7 +22,8 @@ function App() {
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
-      await dispatch(productsAction.getAllProducts())
+      await dispatch(productsAction.getAllProducts());
+      await dispatch(reviewsAction.getAllReviews());
       setLoaded(true);
     })();
   }, [dispatch]);
@@ -49,6 +53,9 @@ function App() {
         </Route>
         <Route path='/all/products' exact={true}>
           <ProductsPage/>
+        </Route>
+        <Route path='/testing' exact={true}>
+          <ReviewSection/>
         </Route>
       </Switch>
     </BrowserRouter>
