@@ -1,5 +1,41 @@
-.candle-pic{
+.individual-product-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.candle-pics-selections img {
     height: 110px;
     width: 120px;
-    border-radius: 2%;
+    border-radius: 5%;
 }
+
+.candle-pics-selections img,
+.display-candle-pic img {
+    cursor: pointer
+}
+
+.display-candle-pic{
+    position: relative;
+    height: 450px;
+    width: 470px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.display-candle-pic img {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.display-candle-pic:hover img{
+    transform: scale(1.4)
+}
+
+.candle-pic-active{
+    opacity: 1 !important;
+}
+
