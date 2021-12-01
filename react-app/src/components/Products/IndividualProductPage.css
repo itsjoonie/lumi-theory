@@ -13,9 +13,9 @@
 .candle-pics-selections img {
     height: 110px;
     width: 120px;
-    border-radius: 5%;
+    border-radius: 8%;
     margin-right: 8px;
-    opacity: 0.6;
+    opacity: 0.55;
     
 }
 
@@ -36,7 +36,7 @@
     width: 470px;
     display: flex;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .display-candle-pic img {
