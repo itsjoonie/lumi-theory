@@ -51,13 +51,16 @@ function IndividualProductPage (){
                         <img src={selectedPic} alt='big pic'class/>
                     </div>
                     <div className='candle-pics-selections' >
-                        <img id='selection-pic1' src={product.pic1} alt='pic' onClick={() => setSelectedPic(product.pic1)}/>
-
-                        {!product.pic2 ?
-                        <div></div>
-                        :
-                        <img id='selection-pic2' src={product.pic2} alt='pic'onClick={() => setSelectedPic(product.pic2)}/>
-                        } 
+                        <div>
+                            <img id='selection-pic1' src={product.pic1} alt='pic' onClick={() => setSelectedPic(product.pic1)}/>
+                        </div>
+                        <div>
+                            {!product.pic2 ?
+                            <div></div>
+                            :
+                            <img id='selection-pic2' src={product.pic2} alt='pic'onClick={() => setSelectedPic(product.pic2)}/>
+                            } 
+                        </div>
                     </div>
                     {/* might move seasonalSpecial function here */}
                 </div>
@@ -76,7 +79,8 @@ function IndividualProductPage (){
                         <p>{product.description}</p>
                         <div>
                         <h4>Frangrance Notes:</h4>
-                        <p></p>
+                        <p>Top: {product.top_scent}</p>
+                        <p>Base: {product.base_scent}</p>
                         </div>
                     </div>
 

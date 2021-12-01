@@ -3,15 +3,31 @@
     flex-direction: row;
 }
 
+.candle-pics-selections{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
 .candle-pics-selections img {
     height: 110px;
     width: 120px;
     border-radius: 5%;
+    margin-right: 8px;
+    opacity: 0.6;
+    
 }
 
 .candle-pics-selections img,
 .display-candle-pic img {
     cursor: pointer
+}
+
+#selection-pic1:hover,
+#selection-pic2:hover{
+    opacity: 1;
+    transition: 0.5s
 }
 
 .display-candle-pic{
@@ -35,7 +51,5 @@
     transform: scale(1.4)
 }
 
-.candle-pic-active{
-    opacity: 1 !important;
-}
+
 
