@@ -26,4 +26,5 @@ class Review(db.Model):
             'body': self.body,
             'first_name': self.user_relation.first_name,
             'last_name': self.user_relation.last_name,
+            'date': self.created_at
         }
