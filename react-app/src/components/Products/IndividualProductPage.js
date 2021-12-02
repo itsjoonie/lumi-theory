@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
+import ReviewSection from '../Reviews/ReviewSection';
 
 function IndividualProductPage (){
     const params = useParams()
@@ -73,7 +74,9 @@ function IndividualProductPage (){
                         <div></div>
                     </div>
                     <div>
-                        {/* quantity box and add to bag button  */}
+                        {/* quantity box and add to cart button 
+                         Free economy shipping on orders $50+ */}
+
                     </div>
                     <div>
                         <p>{product.description}</p>
@@ -86,6 +89,9 @@ function IndividualProductPage (){
 
 
                 </div>
+            </div>
+            <div>
+                <ReviewSection product_id={product}/>
             </div>
 
         </div>
