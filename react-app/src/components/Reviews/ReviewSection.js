@@ -3,13 +3,16 @@ import {useParams} from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import './ReviewSection.css';
 import '../../store/review'
+import Modal from '../Modal/Modal';
 
+const BUTTON_WRAPPER_STYLES = {
+  position: 'relative',
+  zIndex: 1
+}
 
 function ReviewSection ({product_id}){
     const reviews = Object.values(useSelector((state)=>(state.review)))
-
-
-
+    const [isOpen, setIsOpen] = useState(false)
 
     console.log(reviews.length, "what is this reviews")
 
@@ -28,6 +31,13 @@ function ReviewSection ({product_id}){
             {/* <div>stars rating | # of reviews</div> */}
             <div>
                 <h1>Reviews</h1>
+                <div style={BUTTON_WRAPPER_STYLES} onClick={() => console.log('clicked')}>
+                    <button onClick={() => setIsOpen(true)}>Open Modal</button>
+
+                    <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+                    Fancy Modal
+                    </Modal>
+                </div>
             </div>
             
             {/* <div>review snapshots? ex how many people rate 5 stas</div> */}
