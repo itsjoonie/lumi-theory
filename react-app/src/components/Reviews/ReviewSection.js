@@ -31,7 +31,7 @@ function ReviewSection ({product_id}){
             {/* <div>stars rating | # of reviews</div> */}
             <div>
                 <h1>Reviews</h1>
-                <div style={BUTTON_WRAPPER_STYLES} onClick={() => console.log('clicked')}>
+                <div style={BUTTON_WRAPPER_STYLES}>
                     <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
                     <Modal open={isOpen} onClose={() => setIsOpen(false)}>
