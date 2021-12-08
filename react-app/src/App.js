@@ -14,6 +14,7 @@ import LandingPage from './components/Home/LandingPage';
 import ProductsPage from './components/Products/ProductsPage';
 import ReviewSection from './components/Reviews/ReviewSection';
 import IndividualProductPage from './components/Products/IndividualProductPage';
+import StarRating from './components/Reviews/StarRating/StarRating';
 
 
 function App() {
@@ -57,6 +58,9 @@ function App() {
         </Route>
         <Route path='/product/:id' exact={true}>
           <IndividualProductPage/>
+        </Route>
+        <Route path='/star' exact={true}>
+          <StarRating/>
         </Route>
       </Switch>
     </BrowserRouter>

@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import './ReviewSection.css';
 import '../../store/review'
 import Modal from '../Modal/Modal';
+import ReviewForm from './ReviewForm';
 
 const BUTTON_WRAPPER_STYLES = {
   position: 'relative',
@@ -35,7 +36,7 @@ function ReviewSection ({product_id}){
                     <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
                     <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                    Fancy Modal
+                        <ReviewForm/>
                     </Modal>
                 </div>
             </div>

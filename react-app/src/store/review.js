@@ -34,14 +34,14 @@ export const getAllReviews = () => async (dispatch) => {
     }
 }
 
-export const createReview = (user_id, product_id, title, rating, body) => async (dispatch) => {
+export const createReview = (user_id, product_id, title, rating, body, first_name, last_name ) => async (dispatch) => {
     const res = await fetch(`/api/reviews/create`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            user_id, product_id, title, rating, body
+            user_id, product_id, title, rating, body, first_name, last_name
         })
 
     })
@@ -50,12 +50,16 @@ export const createReview = (user_id, product_id, title, rating, body) => async 
 const initialState ={};
 
 const reviewReducer = (state = initialState, action) =>{
+    let newState = {...state}
     switch(action.type){
         case LOAD_REVIEWS:
             return {
                 ...state,
                 ...action.reviews
             }
+        case ADD_REVIEW:
+            newState[action.review.id] = action.review
+            return newState
         default:
             return state
     }
