@@ -41,22 +41,34 @@ function ReviewForm () {
         <>
 
             <form onSubmit={handleSubmit}>
-                <div class='form-control'> 
-                    <label for='first_name'>First Name</label>
-                    <input type='text' placeholder='' />
-                    <small>Error Message</small>
+                <div className='form-name-container'> 
+                    <div className='form-name-area'>
+                        <label for='first_name'>First Name</label>
+                        <input type='text' placeholder='' />
+                        <small>Error Message</small>
+                    </div>
+                    <div className='form-name-area last-name'> 
+                        <label for='lastName'>Last Name</label>
+                        <input type='text' placeholder='' />
+                        <small>Error Message</small>
+                    </div>
                 </div>
                 <div class='form-control'> 
-                    <label for='lastName'>Last Name</label>
-                    <input type='text' placeholder='' />
+                    <label for='title'>Title of your review</label>
+                    <input type='text' placeholder='Title here....'/>
                     <small>Error Message</small>
                 </div>
-                <div class='form-control'> 
-                    <label for='rating'>Rating</label>
+                <div> 
+                    <label for='rating'>Rating:</label>
                     <StarRating/>
                     <small>Error Message</small>
                 </div>
-
+                <div class='form-control'> 
+                    <label for='body'>What do you think?</label>
+                    <textarea type='text' placeholder='Write your review here...'/>
+                    <small>Error Message</small>
+                </div>
+                <button>Submit</button>
             </form>
            
         </>
