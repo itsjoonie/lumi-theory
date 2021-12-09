@@ -34,17 +34,26 @@ export const getAllReviews = () => async (dispatch) => {
     }
 }
 
-export const createReview = (user_id, product_id, title, rating, body, first_name, last_name ) => async (dispatch) => {
+export const createReview = (user_id, product_id, title, rating, body ) => async (dispatch) => {
     const res = await fetch(`/api/reviews/create`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            user_id, product_id, title, rating, body, first_name, last_name
+            user_id, product_id, title, rating, body
         })
 
     })
+    const data = await res.json();
+    console.log(data, "THIS IS DATA WHAT")
+    if(res.ok){
+        dispatch(addReview(data))
+        return data
+    }
+    else {
+        return data
+    }
 }
 
 const initialState ={};

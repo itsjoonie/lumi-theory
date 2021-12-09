@@ -24,9 +24,7 @@ def create_review ():
             product_id=form.data['product_id'],
             title=form.data['title'],
             rating=form.data['rating'],
-            body=form.data['body'],
-            first_name=form.data['first_name'],
-            last_name=form.data ['last_name'],
+            body=form.data['body']
         )
         db.session.add(review)
         db.session.commit()
@@ -49,8 +47,6 @@ def update_review(id):
             review.title=form.data['title']
             review.rating=form.data['rating']
             review.body=form.data['body']
-            review.first_name=form.data['first_name']
-            review.last_name=form.data ['last_name']
             db.session.add(review)
             db.session.commit()
             return review.to_dict()

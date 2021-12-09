@@ -10,13 +10,12 @@ function ReviewForm () {
     const dispatch = useDispatch()
     const product_id = params.id
     const user_id = useSelector(state => state.session.user.id)
+    console.log("what is this user id", user_id)
     const product = useSelector((state)=>(state.product[product_id]))
 
     const [title, setTitle] = useState('');
     const [rating, setRating] = useState('');
     const [body, setBody] = useState('')
-    const [first_name, setFirstName] = useState('');
-    const [last_name, setLastName] = useState('')
     const [errors, setErrors] = useState('')
     
     const handleSubmit = async (e) => {
@@ -27,13 +26,11 @@ function ReviewForm () {
             title, 
             +rating, 
             body, 
-            first_name, 
-            last_name
         ))
         
-        if(data.errrors){
-            setErrors(data.error)
-        }
+        // if(data.errors){
+        //     setErrors(data.errors)
+        // }
     }
     
     
@@ -41,31 +38,26 @@ function ReviewForm () {
         <>
 
             <form onSubmit={handleSubmit}>
-                <div className='form-name-container'> 
-                    <div className='form-name-area'>
-                        <label for='first_name'>First Name</label>
-                        <input type='text' placeholder='' />
-                        <small>Error Message</small>
-                    </div>
-                    <div className='form-name-area last-name'> 
-                        <label for='lastName'>Last Name</label>
-                        <input type='text' placeholder='' />
-                        <small>Error Message</small>
-                    </div>
-                </div>
                 <div class='form-control'> 
-                    <label for='title'>Title of your review</label>
-                    <input type='text' placeholder='Title here....'/>
+                    <label>Title of your review</label>
+                    <input type='text' placeholder='Title here....'
+                    value = {title}
+                    onChange={(e) => setTitle(e.target.value)}/>
                     <small>Error Message</small>
                 </div>
                 <div> 
                     <label for='rating'>Rating:</label>
-                    <StarRating/>
+                    {/* <StarRating/> */}
+                    <input type='text' placeholder='Title here....'
+                    value = {rating}
+                    onChange={(e) => setRating(e.target.value)}/>
                     <small>Error Message</small>
                 </div>
                 <div class='form-control'> 
-                    <label for='body'>What do you think?</label>
-                    <textarea type='text' placeholder='Write your review here...'/>
+                    <label>What do you think?</label>
+                    <textarea type='text' placeholder='Write your review here...'
+                    value={body}
+                    onChange ={(e) => setBody(e.target.value)}/>
                     <small>Error Message</small>
                 </div>
                 <button>Submit</button>

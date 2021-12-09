@@ -39,7 +39,8 @@
 
 .form-control textarea{
     width: 35rem;
-    height: 150px
+    height: 150px;
+    resize: none
 }
 
 .form-name-area input:focus,
