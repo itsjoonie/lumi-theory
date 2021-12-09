@@ -5,6 +5,8 @@ import * as reviewAction from '../../store/review'
 import './ReviewForm.css'
 import StarRating from './StarRating/StarRating';
 
+
+
 function ReviewForm () {
     const params = useParams()
     const dispatch = useDispatch()
@@ -17,6 +19,7 @@ function ReviewForm () {
     const [rating, setRating] = useState('');
     const [body, setBody] = useState('')
     const [errors, setErrors] = useState('')
+    const [hover, setHover] = useState(null)
     
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -48,9 +51,30 @@ function ReviewForm () {
                 <div> 
                     <label for='rating'>Rating:</label>
                     {/* <StarRating/> */}
-                    <input type='text' placeholder='Title here....'
+                    {/* <input type='text' placeholder='Title here....'
                     value = {rating}
-                    onChange={(e) => setRating(e.target.value)}/>
+                    onChange={(e) => setRating(e.target.value)}/> */}
+                {/* ------rating start----- */}
+                    {[...Array(5)].map((star, i) => {
+                    const ratingValue = i + 1
+
+                    return (
+                    <label>
+                        <input type='radio' className='rating' 
+                        value={ratingValue}
+                        onClick={() => setRating(ratingValue)}
+                        
+                        />
+                            <i className='fas fa-star' id='star' 
+                            style={{ color: ratingValue <= ( hover || rating ) ? "#ffd166" :"#ced4da"}}
+                            onMouseOver={()=> setHover(ratingValue)}
+                            onMouseLeave={()=> setHover(null)}></i>
+                   
+                    </label>
+                    ) 
+                })}
+
+                {/* ------rating end ------- */}
                     <small>Error Message</small>
                 </div>
                 <div class='form-control'> 
