@@ -1,3 +1,15 @@
-.rating{
-
+.rating {
+    display: none;
+    
 }
+
+
+#star {
+    font-size: 1.33rem;
+}
+
+#star:hover {
+    cursor: pointer;
+    transition: color 200ms
+}
+
