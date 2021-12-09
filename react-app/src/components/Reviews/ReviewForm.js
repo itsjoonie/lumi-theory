@@ -16,7 +16,7 @@ function ReviewForm () {
     const product = useSelector((state)=>(state.product[product_id]))
 
     const [title, setTitle] = useState('');
-    const [rating, setRating] = useState('');
+    const [rating, setRating] = useState(null);
     const [body, setBody] = useState('')
     const [errors, setErrors] = useState('')
     const [hover, setHover] = useState(null)
@@ -50,31 +50,7 @@ function ReviewForm () {
                 </div>
                 <div> 
                     <label for='rating'>Rating:</label>
-                    {/* <StarRating/> */}
-                    {/* <input type='text' placeholder='Title here....'
-                    value = {rating}
-                    onChange={(e) => setRating(e.target.value)}/> */}
-                {/* ------rating start----- */}
-                    {[...Array(5)].map((star, i) => {
-                    const ratingValue = i + 1
-
-                    return (
-                    <label>
-                        <input type='radio' className='rating' 
-                        value={ratingValue}
-                        onClick={() => setRating(ratingValue)}
-                        
-                        />
-                            <i className='fas fa-star' id='star' 
-                            style={{ color: ratingValue <= ( hover || rating ) ? "#ffd166" :"#ced4da"}}
-                            onMouseOver={()=> setHover(ratingValue)}
-                            onMouseLeave={()=> setHover(null)}></i>
-                   
-                    </label>
-                    ) 
-                })}
-
-                {/* ------rating end ------- */}
+                    <StarRating rating={rating} setRating ={setRating}/>
                     <small>Error Message</small>
                 </div>
                 <div class='form-control'> 

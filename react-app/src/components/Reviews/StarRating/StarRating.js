@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import './StarRating.css'
 
-function StarRating () {
-    const [rating, setRating] = useState(null)
+function StarRating ({rating, setRating}) {
     const [hover, setHover] = useState(null)
 
     return (
