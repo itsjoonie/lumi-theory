@@ -48,7 +48,7 @@ function ReviewForm () {
                     onChange={(e) => setTitle(e.target.value)}/>
                     <small>Error Message</small>
                 </div>
-                <div> 
+                <div className='star-rating-section'> 
                     <label for='rating'>Rating:</label>
                     <StarRating rating={rating} setRating ={setRating}/>
                     <small>Error Message</small>

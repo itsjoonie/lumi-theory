@@ -1,0 +1,13 @@
+.modal-close-x{
+    margin-top: -20px;
+    overflow: auto;
+}
+
+.modal-close-x button{
+    float: right;
+    border: none;
+    background: transparent;
+}
+.fa-times{
+    font-size: 1.1rem;
+}

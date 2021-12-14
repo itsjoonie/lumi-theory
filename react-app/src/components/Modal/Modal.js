@@ -1,7 +1,6 @@
-
-   
 import React from 'react'
 import ReactDom from 'react-dom'
+import './Modal.css'
 
 const MODAL_STYLES = {
   position: 'fixed',
@@ -9,7 +8,7 @@ const MODAL_STYLES = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#FFF',
-  padding: '50px',
+  padding: '40px',
   zIndex: 1000
 }
 
@@ -30,8 +29,10 @@ function Modal({ open, children, onClose }) {
     <>
       <div style={OVERLAY_STYLES} onClick={onClose} />
       <div style={MODAL_STYLES}>
-        <button onClick={onClose}>Close Modal</button>
-        {children}
+          <div className='modal-close-x'>
+            <button onClick={onClose}><i class="fas fa-times" /></button>
+          </div>
+          {children}
       </div>
     </>,
     document.getElementById('portal')
