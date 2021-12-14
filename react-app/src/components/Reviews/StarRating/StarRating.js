@@ -6,7 +6,7 @@ function StarRating ({rating, setRating}) {
 
     return (
         <>
-            <div> 
+            <div className='star-rating-container'> 
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1
 

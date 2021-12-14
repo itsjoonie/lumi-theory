@@ -7,7 +7,7 @@ import StarRating from './StarRating/StarRating';
 
 
 
-function ReviewForm () {
+function ReviewForm ({onClose}) {
     const params = useParams()
     const dispatch = useDispatch()
     const product_id = params.id
@@ -30,37 +30,44 @@ function ReviewForm () {
             +rating, 
             body, 
         ))
-        
-        // if(data.errors){
-        //     setErrors(data.errors)
-        // }
+        if(data.errors){
+            setErrors(data.errors)
+        }
     }
     
     
     return (
         <>
-
+            
             <form onSubmit={handleSubmit}>
-                <div class='form-control'> 
-                    <label>Title of your review</label>
+                <h1 className='review-form-h1'>WRITE A REVIEW</h1>
+                <div class='form-control form-content'> 
+                    <label>Title of your review:</label>
                     <input type='text' placeholder='Title here....'
                     value = {title}
                     onChange={(e) => setTitle(e.target.value)}/>
-                    <small>Error Message</small>
+                    <small className='review-form-small error'>{errors.title}</small>
                 </div>
-                <div className='star-rating-section'> 
+                <div className='star-rating-section form-content'> 
                     <label for='rating'>Rating:</label>
                     <StarRating rating={rating} setRating ={setRating}/>
-                    <small>Error Message</small>
+                    <small className='review-form-small error'>{errors.rating}</small>
                 </div>
-                <div class='form-control'> 
+                <div class='form-control form-content'> 
                     <label>What do you think?</label>
                     <textarea type='text' placeholder='Write your review here...'
                     value={body}
                     onChange ={(e) => setBody(e.target.value)}/>
-                    <small>Error Message</small>
+                    
                 </div>
-                <button>Submit</button>
+                <div className='review-form-btn-container'>
+                    <div>
+                        <button className='review-form-btn form-btn-cancle' onClick={onClose}>Cancel</button>
+                    </div>
+                    <div>
+                        <button className='review-form-btn form-btn-submit' type='submit'>Submit</button>
+                    </div>
+                </div>
             </form>
            
         </>

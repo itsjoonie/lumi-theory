@@ -1,9 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&family=Arima+Madurai:wght@500&family=Exo&display=swap');
+/* font-family: 'Advent Pro', sans-serif;
+font-family: 'Arima Madurai', cursive;
+font-family: 'Exo', sans-serif; */
+
+.review-form-h1{
+	margin-bottom: 20px;
+	font-size: 1.3rem;
+	text-align: center;
+	font-family: 'Arima Madurai', cursive;
+}
+
+.form-content label{
+	font-family: 'Exo', sans-serif;
+	font-weight: bold;
+	font-size: 1rem;
+	margin-bottom: 8px !important;
+}
+
 .form {
 	padding: 30px 40px;	
 }
 
-.form-control,
-.form-name-area {
+.form-control {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
 	position: relative;
@@ -47,7 +65,32 @@
 	border-color: #777;
 }
 
+.form-control.error input{
+	border-color: #e74c3c;
+}
+
 .star-rating-section{
 	margin-top: -10px;
 	margin-bottom: 20px;
 }
+
+.review-form-btn-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.review-form-small{
+	visibility: hidden;
+}
+
+.review-form-small.error{
+	visibility: visible;
+	color: #e74c3c
+}
+
+.review-form-btn{
+	height: 1.80rem;
+	width: 3.95rem;
+}
+

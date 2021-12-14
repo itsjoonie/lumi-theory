@@ -36,7 +36,7 @@ function ReviewSection ({product_id}){
                     <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
                     <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                        <ReviewForm/>
+                        <ReviewForm onClose={() => setIsOpen(false)}/>
                     </Modal>
                 </div>
             </div>

@@ -2,7 +2,9 @@
     display: none;
     
 }
-
+.star-rating-container{
+    margin-top: 8px;
+}
 
 #star {
     font-size: 1.7rem;
