@@ -5,7 +5,8 @@ import './ReviewSection.css';
 import '../../store/review'
 import Modal from '../Modal/Modal';
 import ReviewForm from './ReviewForm';
-import DisplayStar from './DisplayStar/DisplayStar';
+import RatingDisplay from '../Products/RatingDisplay/RatingDisplay';
+
 
 const BUTTON_WRAPPER_STYLES = {
   position: 'relative',
@@ -27,6 +28,8 @@ function ReviewSection ({product_id}){
         })
         return num.length
     }
+
+    
 
     return(
         <div className='review-section'>
@@ -54,7 +57,7 @@ function ReviewSection ({product_id}){
                         <div>
 
                             <div>{review.title}</div>
-                            <div> <DisplayStar starNum={review.rating}/></div>
+                            <div> <RatingDisplay rating={review.rating}/></div>
                             <div>{review.first_name} on {review.date} </div>
                             <div>{review.body}</div>
                         </div>

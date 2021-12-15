@@ -3,12 +3,16 @@ import {useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
-import DisplayStar from '../Reviews/DisplayStar/DisplayStar';
+
 
 function IndividualProductPage (){
     const params = useParams()
     const productId = params.id
     const product = useSelector((state)=>(state.product[productId]))
+    const reviews = Object.values(useSelector((state)=>(state.review)))
+    const filterReview = reviews.filter(review => review.product_id === product.id)
+    console.log(filterReview, 'fitlerefsfdafafa')
+   
 
     const [selectedPic, setSelectedPic] = useState(product.pic1)
     const [rating, setRating] = useState(null)
@@ -31,15 +35,15 @@ function IndividualProductPage (){
         
     }
 
-        const seasonalSpecial = () =>{
-            if(!product.special && product.seasonal) {
-                return <span>Seasonal single wicked candle</span>
-            } else if(product.special && !product.seasonal) {
-                return <span>Special edition single wicked candle</span>
-            } else {
-                return <span>Original single wicked candle</span>
-            }
+    const seasonalSpecial = () =>{
+        if(!product.special && product.seasonal) {
+            return <span>Seasonal single wicked candle</span>
+        } else if(product.special && !product.seasonal) {
+            return <span>Special edition single wicked candle</span>
+        } else {
+            return <span>Original single wicked candle</span>
         }
+    }
 
     
 
@@ -72,7 +76,7 @@ function IndividualProductPage (){
                         <div>
                             <h1 className='product-name-h1'>{product.name}</h1>
                             <h2 className='product-special-h2'>{seasonalSpecial()}</h2>
-                            <p className='product-star'> <DisplayStar starNum={setRating}/></p>
+                            <p className='product-star'></p>
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
                             <div></div>
                         </div>
