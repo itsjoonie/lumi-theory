@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
+import DisplayStar from '../Reviews/DisplayStar/DisplayStar';
 
 function IndividualProductPage (){
     const params = useParams()
@@ -10,6 +11,7 @@ function IndividualProductPage (){
     const product = useSelector((state)=>(state.product[productId]))
 
     const [selectedPic, setSelectedPic] = useState(product.pic1)
+    const [starNum, setStarNum] = useState(null)
 
     const togglePic = () => {
 
@@ -46,54 +48,55 @@ function IndividualProductPage (){
         {/* <div>Maybe the navigation section here?</div> */}
 
         {/* picture section */}
-            <div className='individual-product-container'>
-                <div className='individual-candle-pictures'>
-                    <div className='display-candle-pic'>
-                        <img src={selectedPic} alt='big pic'class/>
-                    </div>
-                    <div className='candle-pics-selections' >
-                        <div>
-                            <img id='selection-pic1' src={product.pic1} alt='pic' onClick={() => setSelectedPic(product.pic1)}/>
+             <div>
+                <div className='individual-product-container'>
+                    <div className='individual-candle-pictures'>
+                        <div className='display-candle-pic'>
+                            <img src={selectedPic} alt='big pic'class/>
                         </div>
+                        <div className='candle-pics-selections' >
+                            <div>
+                                <img id='selection-pic1' src={product.pic1} alt='pic' onClick={() => setSelectedPic(product.pic1)}/>
+                            </div>
+                            <div>
+                                {!product.pic2 ?
+                                <div></div>
+                                :
+                                <img id='selection-pic2' src={product.pic2} alt='pic'onClick={() => setSelectedPic(product.pic2)}/>
+                                } 
+                            </div>
+                        </div>
+                        {/* might move seasonalSpecial function here */}
+                    </div>
+                    <div className='individual-product-details'>
                         <div>
-                            {!product.pic2 ?
+                            <h1 className='product-name-h1'>{product.name}</h1>
+                            <h2 className='product-special-h2'>{seasonalSpecial()}</h2>
+                            <p className='product-star'> <DisplayStar starNum={setStarNum}/></p>
+                            <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
                             <div></div>
-                            :
-                            <img id='selection-pic2' src={product.pic2} alt='pic'onClick={() => setSelectedPic(product.pic2)}/>
-                            } 
                         </div>
-                    </div>
-                    {/* might move seasonalSpecial function here */}
-                </div>
-                <div className='individual-product-details'>
-                    <div>
-                        <h1>{product.name}</h1>
-                        <h2>{seasonalSpecial()}</h2>
-                        <p>Star Rating Here and write a review</p>
-                        <h3><span>$</span>{product.price}.00</h3>
-                        <div></div>
-                    </div>
-                    <div>
-                        {/* quantity box and add to cart button 
-                         Free economy shipping on orders $50+ */}
-
-                    </div>
-                    <div>
-                        <p>{product.description}</p>
                         <div>
-                        <h4>Frangrance Notes:</h4>
-                        <p>Top: {product.top_scent}</p>
-                        <p>Base: {product.base_scent}</p>
+                            {/* quantity box and add to cart button 
+                            Free economy shipping on orders $50+ */}
+
                         </div>
+                        <div>
+                            <p>{product.description}</p>
+                            <div>
+                            <h4>Frangrance Notes:</h4>
+                            <p>Top: {product.top_scent}</p>
+                            <p>Base: {product.base_scent}</p>
+                            </div>
+                        </div>
+
+
                     </div>
-
-
+                </div>
+                <div className='review-container'>
+                    <ReviewSection product_id={product}/>
                 </div>
             </div>
-            <div>
-                <ReviewSection product_id={product}/>
-            </div>
-
         </div>
     )
 }

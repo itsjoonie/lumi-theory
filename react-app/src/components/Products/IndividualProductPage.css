@@ -1,7 +1,26 @@
-.individual-product-container{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+Display&family=Readex+Pro:wght@300&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans Display', sans-serif;
+font-family: 'Readex Pro', sans-serif; */
+
+.individual-product-page{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    max-width: 75%;
+    margin: auto;
 }
+
+.individual-product-container{
+    margin-top: 35px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* candle picture selection tiny icon */
 
 .candle-pics-selections{
     margin-top: 12px;
@@ -11,8 +30,8 @@
 }
 
 .candle-pics-selections img {
-    height: 110px;
-    width: 120px;
+    height: 90px;
+    width: 100px;
     border-radius: 8%;
     margin-right: 8px;
     opacity: 0.55;
@@ -23,6 +42,8 @@
 .display-candle-pic img {
     cursor: pointer
 }
+
+/* main displayed candle image */
 
 #selection-pic1:hover,
 #selection-pic2:hover{
@@ -52,4 +73,17 @@
 }
 
 
+/* product details  */
+.individual-product-details {
+    padding-left: 5rem;
+}
 
+.product-name-h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-special-h2 {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
