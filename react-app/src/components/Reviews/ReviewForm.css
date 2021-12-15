@@ -84,13 +84,30 @@ font-family: 'Exo', sans-serif; */
 	visibility: hidden;
 }
 
-.review-form-small.error{
+.review-form-small.error {
 	visibility: visible;
 	color: #e74c3c
 }
 
-.review-form-btn{
-	height: 1.80rem;
-	width: 3.95rem;
+.review-form-btn {
+	box-sizing: border-box;
+	height: 2rem;
+	width: 4rem;
+	border: none;
+	border-radius: 5%;
 }
 
+.form-btn-cancle:hover {
+	background-color: rgba(185, 183, 183, 0.561);
+	font-weight: bolder;
+}
+
+.form-btn-submit {
+	background-color: #000;
+	color: #ffff;
+}
+
+.form-btn-submit:hover {
+	background-color: rgba(0, 0, 0, 0.87);
+	font-weight: bolder;
+}
