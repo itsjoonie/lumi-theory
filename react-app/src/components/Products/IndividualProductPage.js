@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
+import RatingDisplay from './RatingDisplay/RatingDisplay';
 
 
 function IndividualProductPage (){
@@ -11,29 +12,29 @@ function IndividualProductPage (){
     const product = useSelector((state)=>(state.product[productId]))
     const reviews = Object.values(useSelector((state)=>(state.review)))
     const filterReview = reviews.filter(review => review.product_id === product.id)
-    console.log(filterReview, 'fitlerefsfdafafa')
+
+const totalRating = () => {
+    let ratingArr = []
+    filterReview.map(review => {
+        ratingArr.push(review.rating)
+    })
+
+    let total = ratingArr.reduce(function(acc, curr){
+        return acc + curr
+    })
+    
+    return Math.round(total/filterReview.length)
+    
+}
+
+
+
    
 
     const [selectedPic, setSelectedPic] = useState(product.pic1)
     const [rating, setRating] = useState(null)
 
-    const togglePic = () => {
-
-        //toggle using the data in src of the img, so have to query selector all
-        //for loop
-
-   
-
-        // setSelectedPic(product.pic2);
-        // const previewPic2 = document.getElementById('selection-pic2')
-        // const previewPic1 = document.getElementById('selection-pic1')
-        // if(setSelectedPic === product.pic2){
-        //     previewPic2.classList.add('candle-pic-active');
-        // }else if(setSelectedPic === product.pic1){
-        //     previewPic1.classList.remove('candle-pic-active')
-        // }
-        
-    }
+    
 
     const seasonalSpecial = () =>{
         if(!product.special && product.seasonal) {
@@ -75,8 +76,8 @@ function IndividualProductPage (){
                     <div className='individual-product-details'>
                         <div>
                             <h1 className='product-name-h1'>{product.name}</h1>
-                            <h2 className='product-special-h2'>{seasonalSpecial()}</h2>
-                            <p className='product-star'></p>
+                            <h2 className='product-special-h2'>{seasonalSpecial()} </h2>
+                            <p className='product-star'><span><RatingDisplay rating={totalRating()}/>({filterReview.length})</span></p>
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
                             <div></div>
                         </div>
