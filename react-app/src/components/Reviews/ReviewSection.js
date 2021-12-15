@@ -5,6 +5,7 @@ import './ReviewSection.css';
 import '../../store/review'
 import Modal from '../Modal/Modal';
 import ReviewForm from './ReviewForm';
+import DisplayStar from './DisplayStar/DisplayStar';
 
 const BUTTON_WRAPPER_STYLES = {
   position: 'relative',
@@ -51,7 +52,9 @@ function ReviewSection ({product_id}){
                     reviews?.map(review => (
                     <div className='review-card' key={review?.id}>{ review?.product_id === product_id?.id && review.id? 
                         <div>
+
                             <div>{review.title}</div>
+                            <div> <DisplayStar starNum={review.rating}/></div>
                             <div>{review.first_name} on {review.date} </div>
                             <div>{review.body}</div>
                         </div>

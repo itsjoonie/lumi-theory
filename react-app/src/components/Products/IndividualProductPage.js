@@ -11,7 +11,7 @@ function IndividualProductPage (){
     const product = useSelector((state)=>(state.product[productId]))
 
     const [selectedPic, setSelectedPic] = useState(product.pic1)
-    const [starNum, setStarNum] = useState(null)
+    const [rating, setRating] = useState(null)
 
     const togglePic = () => {
 
@@ -72,7 +72,7 @@ function IndividualProductPage (){
                         <div>
                             <h1 className='product-name-h1'>{product.name}</h1>
                             <h2 className='product-special-h2'>{seasonalSpecial()}</h2>
-                            <p className='product-star'> <DisplayStar starNum={setStarNum}/></p>
+                            <p className='product-star'> <DisplayStar starNum={setRating}/></p>
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
                             <div></div>
                         </div>
