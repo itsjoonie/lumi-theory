@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import Sidebar from './Modal/Sidebar';
 import './NavBar.css'
 
 const NavBar = () => {
@@ -44,7 +45,8 @@ const NavBar = () => {
                 <i class="far fa-heart"></i>
             </div>
             <div className="nav-shopping-cart">
-                <i class="fas fa-shopping-cart"><span>(0)</span></i>
+                {/* <i class="fas fa-shopping-cart"><span>(0)</span></i> */}
+                <Sidebar/>
             </div>
         </div>
     
