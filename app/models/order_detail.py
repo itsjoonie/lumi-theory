@@ -7,7 +7,7 @@ class Order_Detail(db.Model):
 
     id = db.Column(db.Integer,primary_key=True, nullable=False)
     user_id= db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    order_id= db.Column(db.Integer, db.ForeignKey('orders.id'), nullable=False)
+    order_totals_id= db.Column(db.Integer, db.ForeignKey('order_totals.id'), nullable=False)
     product_id= db.Column(db.Integer, db.ForeignKey('products.id'), nullable=False)
     quantity = db.Column(db.Integer , nullable=False)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
@@ -18,7 +18,7 @@ class Order_Detail(db.Model):
         return {
             'id': self.id,
             'user_id': self.user_id,
-            'order_id': self.order_id,
+            'order_totals_id': self.order_totals_id,
             'product_id': self.product_id,
             'quantity': self.quantity,
             'created_at': self.created_at,
