@@ -15,9 +15,9 @@ const BUTTON_WRAPPER_STYLES = {
 
 function ReviewSection ({product_id}){
     const reviews = Object.values(useSelector((state)=>(state.review)))
+    const sessionUser = useSelector(state => state.session.user.id)
     const [isOpen, setIsOpen] = useState(false)
 
-    console.log(reviews.length, "what is this reviews")
 
     const numOfReviews = () => {
         const num = []
@@ -34,14 +34,20 @@ function ReviewSection ({product_id}){
     return(
         <div className='review-section'>
             {/* <div>stars rating | # of reviews</div> */}
-            <div>
-                <h1>Reviews</h1>
-                <div style={BUTTON_WRAPPER_STYLES}>
-                    <button onClick={() => setIsOpen(true)}>Open Modal</button>
+            <div className='review-banner1'>
+                <h1 className='review-heading1'>What the people are saying</h1>
+                <div className='review-section-addreview'>
+                    
+                    <div >
+                        <p className='review-basedOn'> Based on {numOfReviews()}{ numOfReviews() <= 1 ? <span> review</span>: <span> reviews</span>}</p>
+                    </div>
+                    <div style={BUTTON_WRAPPER_STYLES}>
+                        <button className="write-review-btn" onClick={() => setIsOpen(true)}>Love it? Write a review!</button>
 
-                    <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                        <ReviewForm onClose={() => setIsOpen(false)}/>
-                    </Modal>
+                        <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+                            <ReviewForm onClose={() => setIsOpen(false)}/>
+                        </Modal>
+                    </div>
                 </div>
             </div>
             
@@ -54,12 +60,23 @@ function ReviewSection ({product_id}){
                     numOfReviews() !== 0 ? 
                     reviews?.map(review => (
                     <div className='review-card' key={review?.id}>{ review?.product_id === product_id?.id && review.id? 
-                        <div>
+                        <div className='review-card-details'>
 
-                            <div>{review.title}</div>
-                            <div> <RatingDisplay rating={review.rating}/></div>
-                            <div>{review.first_name} on {review.date} </div>
-                            <div>{review.body}</div>
+                            <p className='review-card-star'> <RatingDisplay rating={review.rating}/></p>
+                            <h4 className='review-card-title'>{review.title}</h4>
+                            <p className='review-card-reviewers'>{review.first_name} <span>on</span> {review.date} </p>
+                            <p>{review.body}</p>
+                            <p className='deleteorDelete'>{ sessionUser === review.user_id ? 
+                                <div className='deleteEdit'>
+                                    <div>delete<span className='deleteOr'>or</span></div>
+                                    <div>edit</div>
+                                </div>
+                                :
+                                
+                                <></>
+                                }
+                            </p>
+                            <hr/>
                         </div>
                     :
                         <>

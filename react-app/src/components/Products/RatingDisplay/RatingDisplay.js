@@ -6,7 +6,7 @@ function RatingDisplay ({rating}) {
             {Array(rating)
                 .fill()
                 .map((_, i) => (
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star" style={{color:"#f4d110"}}></i>
                 ))}
         </>
     )

@@ -1,3 +1,104 @@
-.testing{
-    margin-top: 20px
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600&display=swap');
+/* font-family: 'Nunito', sans-serif; */
+
+.written-reviews{
+    width: 100%;
+}
+
+.review-banner1 {
+    background-color: #02354b;
+    height: 6.3rem;
+    padding: 1.1rem;
+    border-radius: 10px
+}
+
+.review-heading1, 
+.review-basedOn {
+    color: rgb(245, 244, 244);
+}
+
+.review-heading1{
+    font-family: 'Nunito', sans-serif;
+}
+
+.review-basedOn{
+    margin-left: 0.3rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem
+}
+.review-section-addreview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.write-review-btn{
+    height: 1.6rem;
+    width: 11rem;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgb(19, 19, 19);
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    font-family: 'Nunito', sans-serif;
+}
+
+.write-review-btn:hover{
+    color: #b49c00;
+    box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+}
+
+.written-reviews{
+    padding: 1rem;
+    margin-top: 25px;
+}
+
+.review-card-details{
+    display: block;
+}
+
+.review-card-star,
+.review-card-title {
+    margin-bottom: 7px;
+}
+
+.review-card-title{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.review-card-reviewers{
+    margin-top: -2px;
+    margin-bottom: 20px;
+}
+
+.review-card-details hr{
+    border-top: 1px solid rgba(169, 169, 169, 0.913);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.deleteorDelete{
+    margin-top: 35px;
+    padding-right: 3px;
+    font-size: 0.85rem;
+    color: rgb(118, 118, 118);
+}
+
+.deleteEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.deleteOr{
+    margin-left: 5px;
+    margin-right: 5px;
 }

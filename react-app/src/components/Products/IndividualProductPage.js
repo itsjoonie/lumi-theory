@@ -77,9 +77,11 @@ const totalRating = () => {
                         <div>
                             <h1 className='product-name-h1'>{product.name}</h1>
                             <h2 className='product-special-h2'>{seasonalSpecial()} </h2>
-                            <p className='product-star'><span><RatingDisplay rating={totalRating()}/>({filterReview.length})</span></p>
+                            <p className='product-star'><RatingDisplay rating={totalRating()}/><span>({filterReview.length} reviews)</span></p>
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
-                            <div></div>
+                            <div>Quanity:
+
+                            </div>
                         </div>
                         <div>
                             {/* quantity box and add to cart button 
@@ -87,7 +89,7 @@ const totalRating = () => {
 
                         </div>
                         <div>
-                            <p>{product.description}</p>
+                            <p className='productDescription'>{product.description}</p>
                             <div>
                             <h4>Frangrance Notes:</h4>
                             <p>Top: {product.top_scent}</p>
