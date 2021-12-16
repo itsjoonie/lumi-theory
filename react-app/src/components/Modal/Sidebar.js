@@ -9,6 +9,7 @@ function Sidebar() {
 
   const showSidebar = () => setSidebar(!sidebar);
 
+
   return (
     <div className='sidebar'>
             <Link to='#' className='cart-icon'>
@@ -21,16 +22,7 @@ function Sidebar() {
                     <i class="fas fa-arrow-circle-right"></i>
                 </Link>
                 </li>
-                {SidebarData.map((item, index) => {
-                return (
-                    <li key={index} className={item.cName}>
-                    <Link to={item.path}>
-                        {item.icon}
-                        <span>{item.title}</span>
-                    </Link>
-                    </li>
-                );
-                })}
+                  {/* CartItem */}
             </ul>
             </nav>
      
