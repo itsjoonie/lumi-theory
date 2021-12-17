@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
 import RatingDisplay from './RatingDisplay/RatingDisplay';
+import AddtoCart from '../Cart/AddtoCart';
 
 
 function IndividualProductPage (){
@@ -79,7 +80,9 @@ const totalRating = () => {
                             <h2 className='product-special-h2'>{seasonalSpecial()} </h2>
                             <p className='product-star'><RatingDisplay rating={totalRating()}/><span>({filterReview.length} reviews)</span></p>
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
-                            <div>Quanity:
+                            <div>
+                                <p>Quanity:</p>
+                                <AddtoCart product={product} />
 
                             </div>
                         </div>

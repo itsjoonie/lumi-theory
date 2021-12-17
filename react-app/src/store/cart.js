@@ -19,8 +19,33 @@ const removeFromCart = (itemId) => ({
     itemId
 })
 
-
-const initialState = {}
-const cartReducer = (state = initialState, action) => {
-    return state
+const saveCart = (cart) => {
+    try {
+        const jsonCart = JSON.stringify(cart)
+        localStorage.setItem('cart', jsonCart)
+    }
+    catch (err) {
+    // ignore
+    }
 }
+
+
+export const addItemToCart = (name, price, id, quantity) => {
+    
+    
+}
+
+
+
+
+
+
+
+let initialState = {}
+
+const cartReducer = (state = initialState, action) => {
+
+  return 'hi'
+}
+
+export default cartReducer
