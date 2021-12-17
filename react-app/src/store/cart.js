@@ -32,23 +32,26 @@ const saveCart = (cart) => {
 }
 
 
-export const useAddItemToCart = (name, price, id, quantity, cart) =>  { //we put use in the name to make it a custom react hook so we can use dispatch cuz dispatch cannot be use in a reg function
+export const useAddItemToCart = (name, price, id, pic1,quantity, cart) =>  { //we put use in the name to make it a custom react hook so we can use dispatch cuz dispatch cannot be use in a reg function
 
     let dispatch = useDispatch()
 
-    if(!cart[id]){
-        cart[id] = {quantity, price, name}
-    } else {
-        cart[id].quantity += quantity
+    return async() => {
+
+        if(!cart[id]){
+            cart[id] = {quantity, price, name, pic1}
+        } else {
+            cart[id].quantity += quantity
+        }
+
+        await dispatch(loadCart(cart))
+        saveCart(cart)
     }
-
-    console.log(cart, "carttttt")
-
-    dispatch(loadCart(cart))
-    saveCart(cart)
 
 
 }
+
+
 
 
 
@@ -64,6 +67,7 @@ const cartReducer = (state = initialState, action) => {
           return {
               ...action.cart
           }
+        
        
       default: 
         return state

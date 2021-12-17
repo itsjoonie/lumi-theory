@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData.js';
-import './Sidebar.css';
+import { useSelector } from "react-redux"
+import { SidebarData } from '../Modal/SidebarData.js';
+import './Cart.css';
 
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+  const cart = Object.values(useSelector(state => state.cart))
+  console.log(cart, "cart ins idebar")
 
 
   return (
@@ -23,6 +26,15 @@ function Sidebar() {
                 </Link>
                 </li>
                   {/* CartItem */}
+                  {
+                    cart.map(item => 
+                    (
+                      <li>
+                        
+                      </li>
+                    ))
+                  }
+                
             </ul>
             </nav>
      

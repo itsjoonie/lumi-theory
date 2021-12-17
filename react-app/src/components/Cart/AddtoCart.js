@@ -7,17 +7,17 @@ function AddtoCart ({product}) {
 
     const [ quantity, setQuantity] = useState(1)
     const cart = useSelector(state => state.cart)
+    console.log(product.pic1, "what is this")
 
-    const addToCart = (e) => {
-        e.preventDefault()
-        cartAction.useAddItemToCart(
+    const addToCart = cartAction.useAddItemToCart(
             product.name,
             product.price,
             product.id,
+            product.pic1,
             quantity,
             cart
         )
-    }
+    
 
     const addQuantity = (e) => {
         e.preventDefault()
@@ -40,7 +40,7 @@ function AddtoCart ({product}) {
                         <p>{quantity}</p>
                     <button onClick={subtractQuantity}> - </button>
                 </div>
-                <button onClick={addToCart}>Add to cart</button>
+                <button type='button' onClick={addToCart}>Add to cart</button>
             </form>
             
         </div>
