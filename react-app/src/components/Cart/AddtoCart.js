@@ -1,17 +1,21 @@
 import React, {useState} from 'react'
+import { useSelector } from "react-redux"
 
 import * as cartAction from '../../store/cart'
 
 function AddtoCart ({product}) {
 
     const [ quantity, setQuantity] = useState(1)
+    const cart = useSelector(state => state.cart)
 
-    const addToCart = () => {
-        cartAction.addItemToCart(
+    const addToCart = (e) => {
+        e.preventDefault()
+        cartAction.useAddItemToCart(
             product.name,
             product.price,
             product.id,
-            quantity
+            quantity,
+            cart
         )
     }
 
@@ -36,7 +40,7 @@ function AddtoCart ({product}) {
                         <p>{quantity}</p>
                     <button onClick={subtractQuantity}> - </button>
                 </div>
-                <button>Add to cart</button>
+                <button onClick={addToCart}>Add to cart</button>
             </form>
             
         </div>

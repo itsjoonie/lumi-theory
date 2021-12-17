@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux"
+
 const LOAD_CART = 'cart/LOAD_CART'
 const ADD_TO_CART = 'cart/ADD_TO_CART'
 const REMOVE_FROM_CART ='cart/REMOVE_FROM_CART'
@@ -30,12 +32,23 @@ const saveCart = (cart) => {
 }
 
 
-export const addItemToCart = (name, price, id, quantity) => {
-    
-    
+export const useAddItemToCart = (name, price, id, quantity, cart) =>  { //we put use in the name to make it a custom react hook so we can use dispatch cuz dispatch cannot be use in a reg function
+
+    let dispatch = useDispatch()
+
+    if(!cart[id]){
+        cart[id] = {quantity, price, name}
+    } else {
+        cart[id].quantity += quantity
+    }
+
+    console.log(cart, "carttttt")
+
+    dispatch(loadCart(cart))
+    saveCart(cart)
+
+
 }
-
-
 
 
 
@@ -44,8 +57,17 @@ export const addItemToCart = (name, price, id, quantity) => {
 let initialState = {}
 
 const cartReducer = (state = initialState, action) => {
+    let newState = {...state}
 
-  return 'hi'
+  switch(action.type){
+      case LOAD_CART:
+          return {
+              ...action.cart
+          }
+       
+      default: 
+        return state
+  }
 }
 
 export default cartReducer
