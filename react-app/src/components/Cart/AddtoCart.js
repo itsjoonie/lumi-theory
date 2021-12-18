@@ -12,7 +12,7 @@ function AddToCart ({product}) {
     const cart = useSelector(state => state.cart)
     console.log(product.pic1, "what is this")
 
-    
+    // 
 
     const addQuantity = (e) => {
         e.preventDefault()
