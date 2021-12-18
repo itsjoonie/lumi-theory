@@ -4,7 +4,8 @@ import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
 import RatingDisplay from './RatingDisplay/RatingDisplay';
-import AddtoCart from '../Cart/AddtoCart';
+import AddtoCart from '../Cart/AddToCart';
+
 
 
 function IndividualProductPage (){
@@ -15,14 +16,16 @@ function IndividualProductPage (){
     const filterReview = reviews.filter(review => review.product_id === product.id)
 
 const totalRating = () => {
-    let ratingArr = []
+    let ratingArr = [0]
+
     filterReview.map(review => {
         ratingArr.push(review.rating)
     })
-
+    
     let total = ratingArr.reduce(function(acc, curr){
         return acc + curr
     })
+   
     
     return Math.round(total/filterReview.length)
     
@@ -78,10 +81,10 @@ const totalRating = () => {
                         <div>
                             <h1 className='product-name-h1'>{product.name}</h1>
                             <h2 className='product-special-h2'>{seasonalSpecial()} </h2>
-                            <p className='product-star'><RatingDisplay rating={totalRating()}/><span>({filterReview.length} reviews)</span></p>
+                            <p className='product-star'><RatingDisplay rating={totalRating()}/><span>({filterReview.length} { filterReview.length <= 1 ? <span>review</span> :<span>reviews</span> })</span></p>
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
                             <div>
-                                <p>Quanity:</p>
+                           
                                 <AddtoCart product={product} />
 
                             </div>
@@ -94,9 +97,9 @@ const totalRating = () => {
                         <div>
                             <p className='productDescription'>{product.description}</p>
                             <div>
-                            <h4>Frangrance Notes:</h4>
-                            <p>Top: {product.top_scent}</p>
-                            <p>Base: {product.base_scent}</p>
+                            <h4 className='fragrance'>Fragrance Notes:</h4>
+                            <p className='fragrance-scent'>Top: {product.top_scent}</p>
+                            <p className='fragrance-scent'>Base: {product.base_scent}</p>
                             </div>
                         </div>
 
@@ -104,6 +107,7 @@ const totalRating = () => {
                     </div>
                 </div>
                 <div className='review-container'>
+                    
                     <ReviewSection product_id={product}/>
                 </div>
             </div>

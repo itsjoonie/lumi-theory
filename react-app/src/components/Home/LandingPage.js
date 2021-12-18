@@ -1,4 +1,5 @@
 import "./LandingPage.css"
+import { NavLink } from "react-router-dom";
 
 function LandingPage(){
     return (
@@ -10,7 +11,8 @@ function LandingPage(){
                         <h2 className="banner-one-content-h2">Scented Candles</h2>
                         <p className="banner-one-content-p" id="id-banner1">Our products are artisanally made with</p>
                         <p className="banner-one-content-p" >passion, eco-friendly and high-quality ingredients</p>
-                        <button className="banner1-btn btn1">SHOP NOW</button>
+                        <NavLink to={'/all/products'}><button className="banner1-btn btn1">SHOP NOW</button>
+                        </NavLink>
                     </div>
                 
 
@@ -50,8 +52,12 @@ function LandingPage(){
                         <h1>About Us</h1>
                         <p id="p1">
                             Lumi Theory is created by a Software Engineer and an Artist with a genuine love for subtle and calming scent.
-                            <br/>It was created during the early beginning of the pandemic to symbolize hope.  
-                            We had in mind that when there are darkness, then light shines the brightest. 
+                            <br/>It was created during the early beginning of the pandemic to symbolize hope. We go by this quote:
+                            
+                        </p>
+                        <p id='quote'>
+                            <span>"</span>Learn to light a candle in the darkest moments of someone’s life. <br/>Be the light that helps others see; it is what gives life its deepest significance.<span>"</span>
+                            <br id='quote-by'/>― Roy T. Bennett
                         </p>
                         <p className="aboutUs-p">
                             We hand poured & personally crafted our candles in small batches for our friends and families.
@@ -62,7 +68,7 @@ function LandingPage(){
                     </div>
                 </div>
                 <div>
-                    <h1>Seasonal Scents</h1>
+                    {/* <h1>Seasonal Scents</h1> */}
                 </div>
 
             </div>

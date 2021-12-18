@@ -154,6 +154,7 @@ font-family: 'Raleway', sans-serif;*/
 
 .aboutUs{
     margin-left: 20px;
+    padding-right: 70px;
 }
 
 .aboutUs h1{
@@ -186,3 +187,13 @@ font-family: 'Raleway', sans-serif;*/
 .aboutUs-p{
     margin-top: 10px;
 }
+
+
+#quote{
+    padding: 20px 100px 20px 100px 
+}
+
+#qote span{
+    /* font-size: 3rem !important; */
+}
+

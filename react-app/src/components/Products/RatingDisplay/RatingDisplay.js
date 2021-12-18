@@ -1,6 +1,10 @@
 import React from "react";
 
 function RatingDisplay ({rating}) {
+
+    if(!rating){
+        rating = 0
+    }
     return(
         <>
             {Array(rating)

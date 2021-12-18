@@ -13,7 +13,7 @@ font-family: 'Readex Pro', sans-serif; */
 }
 
 .individual-product-container{
-    margin-top: 35px;
+    margin-top: 80px;
     margin-bottom: 90px;
     display: flex;
     flex-direction: row;
@@ -32,7 +32,7 @@ font-family: 'Readex Pro', sans-serif; */
 .candle-pics-selections img {
     height: 90px;
     width: 100px;
-    border-radius: 8%;
+    border-radius: 13%;
     margin-right: 8px;
     opacity: 0.55;
     
@@ -53,7 +53,7 @@ font-family: 'Readex Pro', sans-serif; */
 
 .display-candle-pic{
     position: relative;
-    height: 450px;
+    height: 460px;
     width: 470px;
     display: flex;
     overflow: hidden;
@@ -90,9 +90,24 @@ font-family: 'Readex Pro', sans-serif; */
 
 .product-price-h3{
     margin-top: 10px;
+    font-size: 1.30rem;
 }
 
 .productDescription{
+    font-family: 'Noto Sans Display', sans-serif;
     margin-top: 20px;
     margin-bottom: 20px;
+    word-spacing: 3px;
+}
+
+.fragrance{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fragrance-scent{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    word-spacing: 3px;
+    letter-spacing: 1px
 }

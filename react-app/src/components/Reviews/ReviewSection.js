@@ -39,7 +39,7 @@ function ReviewSection ({product_id}){
                 <div className='review-section-addreview'>
                     
                     <div >
-                        <p className='review-basedOn'> Based on {numOfReviews()}{ numOfReviews() <= 1 ? <span> review</span>: <span> reviews</span>}</p>
+                        <p className='review-basedOn'> Based on {numOfReviews()}{ numOfReviews() <=1 ? <span> review</span>: <span> reviews</span>}</p>
                     </div>
                     <div style={BUTTON_WRAPPER_STYLES}>
                         <button className="write-review-btn" onClick={() => setIsOpen(true)}>Love it? Write a review!</button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import './ProductsPage.css';
 
 function ProductsPage (){
@@ -20,9 +21,19 @@ function ProductsPage (){
                     <div className='products-item-square'>
                         {products?.map(oneProduct =>(<div key={oneProduct.id} className='products-item-card'>
                             <div className='products-item-content'>
+                                <NavLink className='productLink' to={`/product/${oneProduct.id}`}>
                                 <img className='products-item-img' src={oneProduct.pic1} alt='pic'/>
-                                <h2>{oneProduct.name}</h2>
-                                <p><span>$</span>{oneProduct.price}.00</p>
+                                </NavLink>
+                                <div className='products-item-details'>
+                                    <div>
+                                    <NavLink className='productLink' to={`/product/${oneProduct.id}`}>
+                                    <h2 className='productNameh2'>{oneProduct.name}</h2>
+                                    </NavLink>
+                                    </div>
+                                    <div>
+                                        <p><span>$</span>{oneProduct.price}.00</p>
+                                    </div>
+                                </div>
 
                             </div>
                         
