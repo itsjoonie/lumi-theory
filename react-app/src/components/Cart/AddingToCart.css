@@ -1,0 +1,33 @@
+.quantity-buttons{
+    margin-top: 20px;
+    margin-bottom:10px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px
+}
+
+.quantity-input{
+    border: 1px solid black;
+    width: 3.4rem;
+    height: 1.6rem;
+    text-align: center;
+    font-size: large;
+}
+
+.quantity-btn{
+    width: 2rem;
+    height: 1.6rem;
+}
+
+.addToCart-btn{
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: large;
+    width: 8.07rem;
+    height: 2rem;
+    margin-bottom: 10px;
+
+}
