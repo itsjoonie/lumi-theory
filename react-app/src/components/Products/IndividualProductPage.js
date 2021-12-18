@@ -4,7 +4,8 @@ import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
 import RatingDisplay from './RatingDisplay/RatingDisplay';
-import AddToCart from '../Cart/AddToCart';
+import AddingToCart from '../Cart/AddingToCart';
+
 
 
 
@@ -85,7 +86,8 @@ const totalRating = () => {
                             <h3 className='product-price-h3'><span>$</span>{product.price}.00</h3>
                             <div>
                            
-                                <AddToCart product={product} />
+                                {/* <AddToCart product={product} /> */}
+                                <AddingToCart product={product}/>
 
                             </div>
                         </div>
