@@ -11,7 +11,7 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = '/images/night_owl.jpg',
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/night_owl.jpg',
     )
     deja_brew = Product (
         name = 'Deja Brew',
@@ -23,7 +23,7 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = '/images/deja_brew.jpg',
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/deja_brew.jpg',
     )
     hidden_page = Product (
         name = 'Hidden Page',
@@ -35,20 +35,20 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = '/images/hidden_page.jpg'
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/hidden_page.jpg'
     )
     starlight = Product (
         name = 'Starlight',
         top_scent = 'Roses, Jasmine',
         base_scent = 'Sandalwood, Vanilla',
         lid_color = 'Gold',
-        description = 'Are you a romantic? This soft floral scent elevates any room with a subtle earthy scent and laid back mood. Perfect for date night at home or for yourself bundle up on the couch watching a romance movie or reading a romance book.',
+        description = 'Are you a romantic? This soft floral scent elevates any room with a subtle earthy scent and laid back mood. Perfect for date night at home or for yourself bundle up on the couch watching a romance movie or reading a romance book. Topped with rose petal and gold mica for love.',
         price  = 25,
         quantity = 5,
         seasonal = False,
         special = True,
-        pic1 = '/images/starlight.jpg',
-        pic2 = '/images/starlight2.jpg'
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/starlight.jpg',
+        pic2 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/starlight2.jpg'
     )
     sea_the_good = Product (
         name = 'Sea the Good',
@@ -60,33 +60,33 @@ def seed_products():
         quantity = 5,
         seasonal = False,
         special = False,
-        pic1 = '/images/sea_the_good.jpg',
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/sea_the_good.jpg',
     )
     manifestation = Product (
         name = 'Manifestation',
         top_scent = 'Eucalyptus, Lemon, Citronella',
         base_scent = 'Warm Amber , Sandalwood',
         lid_color = 'Gold',
-        description = 'Need a little bit of positivity in your life to reach your goal? This candle is for you! This fresh citrus scent helps cleanse your negativity and produce serotonin to give you a boost of energy and motivation. Hope you achieve your dreams. We are all rooting for you!',
+        description = 'Need a little bit of positivity in your life to reach your goal? This candle is for you! This fresh citrus scent helps cleanse your negativity and produce serotonin to give you a boost of energy and motivation. Hope you achieve your dreams. We are all rooting for you! Topped with Calendula Petal and Gold Mica for the exta positive vibe.',
         price  = 25,
         quantity = 5,
         seasonal = False,
         special = True,
-        pic1 = '/images/manifestation.jpg',
-        pic2 = '/images/manifestation2.jpg',
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/manifestation.jpg',
+        pic2 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/manifestation2.jpg',
     )
     me_time = Product (
         name = 'Me Time',
         top_scent = 'Honey, Lavender',
         base_scent = 'Oatmilk, Almond',
         lid_color = 'Gold',
-        description = 'After working all day, you deserve a break! Self care is the best care. This candle is perfect for the days when you want to take it easy and take care of yourself. Very calming scent with a hint of honey and oatmeal that will make you feel relaxed after a long day.',
+        description = 'After working all day, you deserve a break! Self care is the best care. This candle is perfect for the days when you want to take it easy and take care of yourself. Very calming scent with a hint of honey and oatmeal that will make you feel relaxed after a long day. Topped with dried rose petal for that extra relaxation. ',
         price  = 25,
         quantity = 5,
         seasonal = False,
         special = True,
-        pic1 = '/images/me_time.jpg',
-        pic2 = '/images/me_time2.jpg'
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/me_time.jpg',
+        pic2 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/me_time2.jpg'
     )
     pumpkin_season = Product (
         name = 'Pumpkin Season',
@@ -98,7 +98,7 @@ def seed_products():
         quantity = 5,
         seasonal = True,
         special = False,
-        pic1 = '/images/pumpkin_season.jpg'
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/pumpkin_season.jpg'
     )
     witchin_life = Product (
         name = 'Witchin\' Life',
@@ -110,7 +110,7 @@ def seed_products():
         quantity = 5,
         seasonal = True,
         special = False,
-        pic1 = '/images/witchin_life.jpg'
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/witchin_life.jpg'
     )
     cozy = Product (
         name = 'Cozy n\' Toasy',
@@ -122,7 +122,7 @@ def seed_products():
         quantity = 5, 
         seasonal = True,
         special = False,
-        pic1 = '/images/cozy.jpg',
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/cozy.jpg',
     )
     autumn_mood = Product (
         name = 'Autumn Mood',
@@ -134,7 +134,7 @@ def seed_products():
         quantity = 5,
         seasonal = True,
         special = False,
-        pic1 = '/images/autumn_mood.jpg'
+        pic1 = 'https://raw.githubusercontent.com/itsjoonie/lumi-theory/main/react-app/public/images/autumn_mood.jpg'
     )
 
     db.session.add(night_owl)
