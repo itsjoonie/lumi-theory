@@ -2,10 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './ProductsPage.css';
+import AddingToCart from '../Cart/AddingToCart'
 
 function ProductsPage (){
 
     const products = Object.values(useSelector((state)=>(state.product)))
+
     console.log(products, "WTHAT IS THIS PRODUCTS")
     return (
         <div className='productsPages'>
@@ -30,7 +32,13 @@ function ProductsPage (){
                                     </NavLink>
                                     </div>
                                     <div>
-                                        <p><span>$</span>{oneProduct.price}.00</p>
+                                        {/* Star Rating */}
+                                    </div>
+                                    <div>
+                                        <p className='productsPrice'><span>$</span>{oneProduct.price}.00</p>
+                                    </div>
+                                    <div className='productsCart'>
+                                        <AddingToCart product={oneProduct.id}/>
                                     </div>
                                 </div>
 

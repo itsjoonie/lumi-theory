@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+/* font-family: 'Nunito', sans-serif;; */
 
 .productsPages{
     /* display: flex;
@@ -83,14 +83,25 @@
 }
 
 .productNameh2{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: -0.01rem;
     font-size: 1.3rem;
+}
+
+.productsPrice {
+    font-family: 'Nunito', sans-serif;
 }
 
 .products-item-details{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px
+    gap: 2px;
+    
+}
+
+.productsCart{
+    margin-top: -13px;
 }
 
 

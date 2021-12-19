@@ -20,7 +20,7 @@ const totalRating = () => {
     let ratingArr = [0]
 
     filterReview.map(review => {
-        ratingArr.push(review.rating)
+        return ratingArr.push(review.rating)
     })
     
     let total = ratingArr.reduce(function(acc, curr){

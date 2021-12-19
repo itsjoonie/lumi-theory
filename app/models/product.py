@@ -34,5 +34,5 @@ class Product(db.Model):
             'seasonal': self.seasonal,
             'special': self.special,
             'pic1': self.pic1,
-            'pic2': self.pic2,
+            'pic2': self.pic2
         }
