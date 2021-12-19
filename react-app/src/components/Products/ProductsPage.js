@@ -10,10 +10,9 @@ function ProductsPage (){
     return (
         <div className='productsPages'>
             <div className="productsPages-main">
-                <div className='productpage-sidebar'>
-                {/* products page sidebar */}
+                {/* <div className='productpage-sidebar'>
                     <h2> Sidebar Here</h2>
-                </div>
+                </div> */}
 
                 <div className='products-item-container'>
                     {/* banners  maybe*/}
