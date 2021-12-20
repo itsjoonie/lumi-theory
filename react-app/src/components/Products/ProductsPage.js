@@ -37,9 +37,7 @@ function ProductsPage (){
                                     <div>
                                         <p className='productsPrice'><span>$</span>{oneProduct.price}.00</p>
                                     </div>
-                                    <div className='productsCart'>
-                                        <AddingToCart product={oneProduct.id}/>
-                                    </div>
+                                    
                                 </div>
 
                             </div>
