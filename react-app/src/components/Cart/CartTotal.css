@@ -1,11 +1,11 @@
 .checkout-container{
     padding: 0 25px 0 25px;
     background-color: rgb(242, 242, 242);
-    height: 30%;
+    height: 40%;
 }
 
 .checkout-container h1{
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .checkout-container button{
