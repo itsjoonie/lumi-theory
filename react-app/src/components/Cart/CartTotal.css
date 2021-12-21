@@ -4,9 +4,32 @@
     height: 40%;
 }
 
-.checkout-container h1{
-    padding-top: 25px;
+
+
+.checkout-calculation-info{
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas: 
+        'tax taxNum'
+        'shipping shippingNum' 
+        'total totalNum';
+    column-gap: 10px;
+    row-gap: 2px;
+    float: end;
 }
+
+.tax, .shipping, .total {
+
+    text-align: end;
+    
+}
+
+.total, .totalNum{
+    margin-top: 5px;
+}
+
+
+
 
 .checkout-container button{
     margin-top: 35px;
