@@ -1,7 +1,10 @@
 .cart-icon {
   margin-left: 2rem;
   background: none;
+  color: white;
 }
+
+
 
 .nav-menu {
   background-color: #faf9f9;
@@ -157,3 +160,31 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
+.fa-cart-plus{
+  font-size: 8rem;
+  color: rgb(157, 157, 157);
+  border-radius: 50%;
+  border: 2px solid rgb(213, 213, 213);
+  margin-bottom: 10px
+  
+}
+
+.emptyCart{
+  margin-top: 50%;
+  text-align: center;
+  color: rgb(80, 80, 80);;
+  
+}
+
+.emptyCart-words {
+  padding-left: 10px;
+}
+
+.startShopping{
+  color: darkblue;
+}
+
+.startShopping::after{
+  color: rgb(20, 20, 215);
+}

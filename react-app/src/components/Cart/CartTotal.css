@@ -9,7 +9,8 @@
 .checkout-calculation-info{
     padding-top: 30px;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
+        'subtotal subtotalNum' 
         'tax taxNum'
         'shipping shippingNum' 
         'total totalNum';
@@ -18,7 +19,7 @@
     float: end;
 }
 
-.tax, .shipping, .total {
+.subtotal, .tax, .shipping, .total {
 
     text-align: end;
     

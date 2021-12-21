@@ -133,3 +133,7 @@ font-family: 'Inconsolata', monospace;*/
     font-family: 'Inconsolata', monospace;
     font-size: small;
 }
+
+.fa-user:hover{
+    cursor: pointer
+}

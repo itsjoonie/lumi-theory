@@ -5,6 +5,7 @@ import Sidebar from './Cart/Cart';
 import './NavBar.css'
 
 const NavBar = () => {
+
   return (
     <div className="navBar">
       <div className="marquee-container">
@@ -24,8 +25,8 @@ const NavBar = () => {
           {/* dropdown menu */}
             <i className="fas fa-bars"></i>
             <div className="dropdown-content">
-              <NavLink className="dropdown-links" to="#">Home</NavLink>
-              <NavLink className="dropdown-links" to="#">Shop</NavLink>
+              <NavLink className="dropdown-links" to="/">Home</NavLink>
+              <NavLink className="dropdown-links" to="/all/products">Shop</NavLink>
               <NavLink className="dropdown-links" to="#">Events</NavLink>
               <NavLink className="dropdown-links" to="#">Our Story</NavLink>
               <NavLink className="dropdown-links" to="#">Contact Us</NavLink>

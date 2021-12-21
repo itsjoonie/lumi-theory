@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux"
 import { SidebarData } from '../Modal/SidebarData.js';
 import './Cart.css';
@@ -25,6 +25,7 @@ function Sidebar() {
     <div className='sidebar'>
             <Link to='#' className='cart-icon'>
                 <i class="fas fa-shopping-cart" onClick={showSidebar}></i>
+                <span>{` `}</span>({cart.length ? cart.length : 0})
             </Link>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items' onClick={showSidebar}>
@@ -32,7 +33,7 @@ function Sidebar() {
                 <Link to='#' className='menu-bars'>
                     <i class="fas fa-arrow-circle-right"></i>
                 </Link>
-                   <h1 className='cart-header'>My Cart (#)</h1>
+                   <h1 className='cart-header'>My Cart ({cart.length})</h1>
                 </li>
                
                 <div className='itemsInCart-container'>
@@ -45,8 +46,14 @@ function Sidebar() {
                             <CartItem key={item.productId} item={item}/>
                       ))
                       :
-                      <div>
-                        <h1>No item</h1>
+                      <div className='emptyCart'>
+                        <i className="fas fa-cart-plus"></i>
+                        <div className='emptyCart-words'>
+                        <h1>your cart is empty!</h1>
+                        <NavLink className='startShopping' to='/all/products'>
+                        <p>Start shopping</p>
+                        </NavLink>
+                        </div>
                       </div>
                     }
 

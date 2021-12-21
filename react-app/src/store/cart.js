@@ -107,6 +107,8 @@ const cartReducer = (state = initialState, action) => {
             itemId = action.itemId
             delete newState[itemId]
             return newState
+        case RESET_CART:
+            return state = {}
       default: 
         return state
   }
