@@ -76,16 +76,22 @@
 
 .productLink{
     text-decoration: none;
+    
+    
 }
 
 .productLink:visited {
-    color: black
+    color: #87986a
+}
+.productLink:hover {
+    color: #a7bb83
 }
 
 .productNameh2{
     font-family: 'Nunito', sans-serif;
     letter-spacing: -0.01rem;
     font-size: 1.3rem;
+    color: black
 }
 
 .productsPrice {
