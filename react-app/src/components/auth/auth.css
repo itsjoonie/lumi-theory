@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
 
 
 .auth-container{
@@ -50,7 +52,7 @@
 .login-banner h1{
     font-family: 'Satisfy', cursive;
     text-align: center;
-    color: rgba(245, 245, 245, 0.879);
+    color: rgba(245, 245, 245, 0.927);
 }
 
 .login-container{
@@ -119,8 +121,24 @@
 }
 
 .login-btn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.90rem;
     width: 100%;
-    height: 25px;
+    height: 30px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: 0.9s;
+    word-spacing: 0.1rem;
+ 
+}
+
+.login-btn:hover{
+    border: 2px solid #edb831;
+    background-color: #fcf7eb;
+    color: black;
+    letter-spacing: 0.08rem;
+    font-weight: bold;
 }
 
 .line-seperator{
@@ -135,9 +153,23 @@
 }
 
 .or-login-as{
+    box-sizing: border-box;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.noAccount{
-    margin-top: 20px;
+.demo span {
+    text-decoration: underline;
+    color: #6d515d
 }
+
+.demo span:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.no-account-signup{
+    text-decoration: underline;
+}
+
+

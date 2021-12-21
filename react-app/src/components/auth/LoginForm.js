@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { NavLink, Redirect, useHistory } from 'react-router-dom';
 import { login } from '../../store/session';
 import Modal from '../Modal/Modal';
 import './auth.css'
@@ -15,6 +15,15 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+
+  const history = useHistory();
+
+
+  const demoLogin = () => {
+        dispatch(login('demo@aa.io', 'password'));
+        history.push('/')
+
+    };
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -73,16 +82,15 @@ const LoginForm = () => {
                       onChange={updatePassword}/>
                     <small>{errors.password}</small>
                   </div>
-                  <button className='login-btn' type='submit'>Login</button>
+                  <button className='login-btn' type='submit'>Log in</button>
                   <hr className='line-seperator' />
               </form>
             
               <div className='or-login-as'>
-                
                 <p id='or'>or</p>
-                <p> login as <span>demo user</span></p>
+                <p  className='demo' onClick={demoLogin}> log in as <span>demo user</span></p>
               </div>
-              <div className='noAccount'>Don't have an account? <span> Sign up</span></div>
+              <div className='noAccount'>Don't have an account? <NavLink className='no-account-signup' to='/signup'> Sign up</NavLink></div>
           </div>
          
       

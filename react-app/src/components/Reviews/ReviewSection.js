@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useParams} from 'react-router-dom'
+import {NavLink, useParams} from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import './ReviewSection.css';
 import '../../store/review'
@@ -15,7 +15,8 @@ const BUTTON_WRAPPER_STYLES = {
 
 function ReviewSection ({product_id}){
     const reviews = Object.values(useSelector((state)=>(state.review)))
-    const sessionUser = useSelector(state => state.session.user.id)
+    const sessionUser= useSelector(state => state.session.user?.id);
+    console.log(sessionUser, "WHAT IS THIS")
     const [isOpen, setIsOpen] = useState(false)
 
 
@@ -41,13 +42,21 @@ function ReviewSection ({product_id}){
                     <div >
                         <p className='review-basedOn'> Based on {numOfReviews()}{ numOfReviews() <=1 ? <span> review</span>: <span> reviews</span>}</p>
                     </div>
+                    { sessionUser ?
                     <div style={BUTTON_WRAPPER_STYLES}>
+                    
                         <button className="write-review-btn" onClick={() => setIsOpen(true)}>Love it? Write a review!</button>
 
                         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
                             <ReviewForm onClose={() => setIsOpen(false)}/>
                         </Modal>
                     </div>
+                    
+                    :
+                        <div>
+                            <NavLink to='/login'><button className="write-review-btn">Sign in to leave a review</button></NavLink>
+                        </div>
+                    }
                 </div>
             </div>
             

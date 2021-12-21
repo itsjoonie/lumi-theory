@@ -55,7 +55,7 @@ font-family: 'Inconsolata', monospace;*/
 }
 
 .nav-menu-bars{
-    margin-left: 5px;
+    margin-left: 10px;
     position: relative;
     display: inline-block;
 }
@@ -96,7 +96,7 @@ font-family: 'Inconsolata', monospace;*/
     box-sizing: border-box;
     width: 76%;
     margin-left: 10px;
-    padding-left: 95px;
+    padding-left: 49px;
 }
 
 .logo-link{
@@ -114,7 +114,7 @@ font-family: 'Inconsolata', monospace;*/
 .nav-heart-shop{
     display: flex;
     flex-direction: row;
-    margin-right: 5px;
+    padding-right: 20px;
 }
 
 .nav-heart{

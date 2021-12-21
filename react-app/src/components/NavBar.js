@@ -43,15 +43,18 @@ const NavBar = () => {
         </div>
         <div className="nav-user">
           {!sessionUser ?
-            <i className="fas fa-user"></i>
+            <NavLink to='/login'>
+              <i className="fas fa-user"></i>
+            </NavLink>
+            
           :
             <LogoutButton/>
           }
         </div>
         <div className="nav-heart-shop">
-            <div className="nav-heart">
+            {/* <div className="nav-heart">
                 <i class="far fa-heart"></i>
-            </div>
+            </div> */}
             <div className="nav-shopping-cart">
                 {/* <i class="fas fa-shopping-cart"><span>(0)</span></i> */}
                 <Sidebar/>
