@@ -102,8 +102,9 @@
 }
 
 .item-name{
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
 .item-price-info{
@@ -113,7 +114,8 @@
 }
 
 .item-price-info h2 {
-  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
   margin-right: 10px;
 }
 
@@ -127,5 +129,6 @@
 }
 
 .item-total-price h3{
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
