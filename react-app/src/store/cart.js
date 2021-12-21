@@ -37,17 +37,17 @@ const saveCart = (cart) => {
 }
 
 
-export const useAddItemToCart = (name, price, id, pic1,quantity, cart) =>  { //we put use in the name to make it a custom react hook so we can use dispatch cuz dispatch cannot be use in a reg function
+export const useAddItemToCart = (name, price, productId, pic1, quantity, cart) =>  { //we put use in the name to make it a custom react hook so we can use dispatch cuz dispatch cannot be use in a reg function
     //id is the product id
 
     let dispatch = useDispatch()
 
     return async() => {
 
-        if(!cart[id]){
-            cart[id] = {quantity, price, name, pic1}
+        if(!cart[productId]){
+            cart[productId] = {quantity, price, name, pic1, productId}
         } else {
-            cart[id].quantity += quantity
+            cart[productId].quantity += 1
         }
 
         await dispatch(loadCart(cart))
@@ -56,13 +56,14 @@ export const useAddItemToCart = (name, price, id, pic1,quantity, cart) =>  { //w
 
 }
 
-export const useSubtractItemToCart = (id, cart) => {
+export const useSubtractItemToCart = (productId, cart) => {
     let dispatch = useDispatch()
         return async () => {
-            if( cart[id].quantity <= 1) {
-                delete cart[id]
+            console.log(cart[productId], "WHATTTTTT")
+            if( cart[productId].quantity <= 1) {
+                delete cart[productId]
             } else {
-                cart[id].quantity -= 1
+                cart[productId].quantity -= 1
             }
             await dispatch(loadCart(cart))
             saveCart(cart)
@@ -70,11 +71,11 @@ export const useSubtractItemToCart = (id, cart) => {
 
 }
 
-export const useDeleteIte = (id, cart) => {
+export const useDeleteItem = (productId, cart) => {
     const dispatch = useDispatch ()
     return async function () {
-        await dispatch(removeFromCart(id));
-        delete cart[id]
+        await dispatch(removeFromCart(productId));
+        delete cart[productId]
         saveCart(cart)
     }
 }

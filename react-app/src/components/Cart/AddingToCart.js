@@ -9,6 +9,7 @@ function AddingToCart ({product}) {
 
     const [ quantity, setQuantity] = useState(1)
 
+
     const cart = useSelector(state => state.cart)
     console.log(product.pic1, "what is this")
 
