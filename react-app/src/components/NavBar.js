@@ -1,10 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import Sidebar from './Cart/Cart';
 import './NavBar.css'
 
 const NavBar = () => {
+
+  const sessionUser = useSelector(state => state.session.user)
 
   return (
     <div className="navBar">
@@ -39,7 +42,11 @@ const NavBar = () => {
             <NavLink className='logo-link' to='/'><h1 className="company-name">Lumi Theory Co.</h1></NavLink>
         </div>
         <div className="nav-user">
+          {!sessionUser ?
             <i className="fas fa-user"></i>
+          :
+            <LogoutButton/>
+          }
         </div>
         <div className="nav-heart-shop">
             <div className="nav-heart">
