@@ -28,10 +28,10 @@ function Sidebar() {
                 <span>{` `}</span>({cart.length ? cart.length : 0})
             </Link>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-            <ul className='nav-menu-items' onClick={showSidebar}>
+            <ul className='nav-menu-items' >
                 <li className='navbar-toggle'>
                 <Link to='#' className='menu-bars'>
-                    <i class="fas fa-arrow-circle-right"></i>
+                    <i class="fas fa-arrow-circle-right" onClick={showSidebar}></i>
                 </Link>
                    <h1 className='cart-header'>My Cart ({cart.length})</h1>
                 </li>
