@@ -34,6 +34,7 @@ function ReviewForm ({onClose}) {
             setErrors(data.errors)
         }
 
+        onClose()
     }
     
     
