@@ -5,7 +5,8 @@ import { signUp } from '../../store/session';
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
-  const [username, setUsername] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -15,15 +16,18 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+      const data = await dispatch(signUp(firstName, lastName, email, password));
       if (data) {
         setErrors(data)
       }
     }
   };
 
-  const updateUsername = (e) => {
-    setUsername(e.target.value);
+  const updateFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+  const updateLastName = (e) => {
+    setLastName(e.target.value);
   };
 
   const updateEmail = (e) => {
@@ -45,48 +49,58 @@ const SignUpForm = () => {
   return (
     <form onSubmit={onSignUp}>
       <div>
-        {errors.map((error, ind) => (
-          <div key={ind}>{error}</div>
-        ))}
-      </div>
-      <div>
-        <label>User Name</label>
-        <input
-          type='text'
-          name='username'
-          onChange={updateUsername}
-          value={username}
-        ></input>
-      </div>
-      <div>
-        <label>Email</label>
-        <input
-          type='text'
-          name='email'
-          onChange={updateEmail}
-          value={email}
-        ></input>
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type='password'
-          name='password'
-          onChange={updatePassword}
-          value={password}
-        ></input>
-      </div>
-      <div>
-        <label>Repeat Password</label>
-        <input
-          type='password'
-          name='repeat_password'
-          onChange={updateRepeatPassword}
-          value={repeatPassword}
-          required={true}
-        ></input>
-      </div>
-      <button type='submit'>Sign Up</button>
+            <div class="login-form-control">
+                <label for="firstname">First Name</label>
+                <input
+                  type='text'
+                  placeholder='first name'
+                  value={firstName}
+                  onChange={updateFirstName}
+                />
+                <small>{errors.email}</small>
+		        </div>
+            <div class="login-form-control">
+                <label for="lastname">First Name</label>
+                <input
+                  type='text'
+                  placeholder='last name'
+                  value={lastName}
+                  onChange={updateLastName}
+                />
+                <small>{errors.email}</small>
+		        </div>
+            <div class="login-form-control">
+                <label for="email">Email</label>
+                <input
+                  name='email'
+                  type='text'
+                  placeholder='email name'
+                  value={email}
+                  onChange={updateEmail}
+                />
+                <small>{errors.email}</small>
+		        </div>
+            <div class="login-form-control">
+              <label for="username">Password</label>
+              <input name='password'
+                type='password'
+                placeholder='Password'
+                value={password}
+                onChange={updatePassword}/>
+              <small>{errors.password}</small>
+            </div>
+            <div class="login-form-control">
+              <label for="username">Confirm Password</label>
+              <input name='password'
+                type='password'
+                onChange={updateRepeatPassword}
+                value={repeatPassword}
+                required={true}
+                />
+              <small>{errors.password}</small>
+            </div>
+            <button className='login-btn' type='submit'>Signup</button>
+        </div>
     </form>
   );
 };

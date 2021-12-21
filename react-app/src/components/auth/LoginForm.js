@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { login } from '../../store/session';
 import Modal from '../Modal/Modal';
+import './auth.css'
+import SignUpForm from './SignUpForm';
 
 
 
@@ -35,37 +37,56 @@ const LoginForm = () => {
   }
 
   return (
-    <div>
-
-        <form onSubmit={onLogin}>
-          <div>
-            {errors.map((error, ind) => (
-              <div key={ind}>{error}</div>
-            ))}
+    <div className='auth-container'>
+      
+        <div className='login-signup-container'>
+          <div className='login-banner'>
+            <div className='login-banner-words'>
+              <div className='banner-words'>
+                <h1>Welcome back</h1>
+                <h1>to</h1>
+                <h1>Lumi Theory</h1>
+              </div>
+            </div>
           </div>
-          <div>
-            <label htmlFor='email'>Email</label>
-            <input
-              name='email'
-              type='text'
-              placeholder='Email'
-              value={email}
-              onChange={updateEmail}
-            />
+          <div className='login-container'>
+              <form  className='login-form' onSubmit={onLogin}>
+                <h1>Login</h1>
+         
+                  <div class="login-form-control">
+                      <label for="username">Email</label>
+                      <input
+                        name='email'
+                        type='text'
+                        placeholder='Email'
+                        value={email}
+                        onChange={updateEmail}
+                      />
+                      <small>{errors.email}</small>
+                  </div>
+                  <div class="login-form-control">
+                    <label for="username">Password</label>
+                    <input name='password'
+                      type='password'
+                      placeholder='Password'
+                      value={password}
+                      onChange={updatePassword}/>
+                    <small>{errors.password}</small>
+                  </div>
+                  <button className='login-btn' type='submit'>Login</button>
+                  <hr className='line-seperator' />
+              </form>
+            
+              <div className='or-login-as'>
+                
+                <p id='or'>or</p>
+                <p> login as <span>demo user</span></p>
+              </div>
+              <div className='noAccount'>Don't have an account? <span> Sign up</span></div>
           </div>
-          <div>
-            <label htmlFor='password'>Password</label>
-            <input
-              name='password'
-              type='password'
-              placeholder='Password'
-              value={password}
-              onChange={updatePassword}
-            />
-            <button type='submit'>Login</button>
-          </div>
-        </form>
-  
+         
+      
+        </div>
     </div>
   );
 };

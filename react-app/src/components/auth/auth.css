@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+.auth-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: -120px;
+}
+
+.login-signup-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    height: 80%;
+}
+
+.login-banner{
+    background-image: url('./banner1.JPG') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 500px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-banner-words{
+    height: 40%;
+    width: 55%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    
+}
+
+.banner-words{
+    margin-top: 18%;
+}
+
+.login-banner h1{
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    color: rgba(245, 245, 245, 0.879);
+}
+
+.login-container{
+    background-color: #65aecda1;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container form{
+    width: 70% ;
+}
+
+.login-form h1{
+    font-family: 'Satisfy', cursive;
+    /* margin-top: -45px; */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.login-form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+    width: 100%
+}
+
+.login-form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.login-form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.login-form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.login-form-control.error input {
+	border-color: #e74c3c;
+}
+
+
+.login-form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.login-form-control.error small {
+	visibility: visible;
+}
+
+.login-btn{
+    width: 100%;
+    height: 25px;
+}
+
+.line-seperator{
+    margin-top: 10px;
+    background-color: rgb(194, 193, 193);
+
+}
+
+#or {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.or-login-as{
+    text-align: center;
+}
+
+.noAccount{
+    margin-top: 20px;
+}
