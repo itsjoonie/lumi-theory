@@ -16,6 +16,7 @@ import ReviewSection from './components/Reviews/ReviewSection';
 import IndividualProductPage from './components/Products/IndividualProductPage';
 import StarRating from './components/Reviews/StarRating/StarRating';
 import Event from './components/Events/Event';
+import Footer from './components/Home/Footer/Footer';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -66,6 +67,7 @@ function App() {
 
         </Route>
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
 }
