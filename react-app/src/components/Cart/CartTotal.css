@@ -1,0 +1,30 @@
+.checkout-container{
+    padding: 0 25px 0 25px;
+    background-color: rgb(242, 242, 242);
+    height: 30%;
+}
+
+.checkout-container h1{
+    padding-top: 15px;
+}
+
+.checkout-container button{
+    margin-top: 35px;
+    background-color: #ffd166;
+    width: 100%;
+    border: none;
+    height: 32px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.checkout-container button:hover{
+    border: 2px solid #ffd166;
+    background-color: whitesmoke;
+}
+
+.fa-lock{
+    margin-right: 10px;
+    font-size: 0.90rem;
+
+}

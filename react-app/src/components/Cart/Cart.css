@@ -50,6 +50,7 @@
 
 .nav-menu-items {
   width: 100%;
+
 }
 
 .navbar-toggle {
@@ -69,6 +70,7 @@
 
 .cart-header{
   margin-left: 85px;
+  color: #3b4847;
 }
 
 
@@ -83,10 +85,8 @@
 }
 
 .items-detail-containers {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
-
-
 
 .items-details{
     display: flex;
@@ -119,7 +119,31 @@
   margin-right: 10px;
 }
 
-.item-total-price{
+.item-add-subtract {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-subtract-btn {
+  background-color: none;
+  border: none;
+}
+
+.add-sub-btn-img:hover {
+  color: #bf9d36;
+}
+
+.add-sub-btn-img {
+  font-size: 0.95rem;
+}
+
+.item-quantity-amt{
+  font-size: 1.05rem;
+}
+
+.item-total-price {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -132,3 +156,4 @@
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
+
