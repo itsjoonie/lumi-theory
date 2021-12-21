@@ -99,6 +99,10 @@ font-family: 'Inconsolata', monospace;*/
     padding-left: 59px;
 }
 
+.logo-link{
+    text-decoration: none;
+}
+
 .company-name{
     box-sizing: border-box;
     font-family: 'WindSong', cursive; 

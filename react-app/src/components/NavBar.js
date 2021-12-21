@@ -35,7 +35,7 @@ const NavBar = () => {
           <i class="fas fa-search"></i>
         </div>
         <div className="logo">
-            <h1 className="company-name">Lumi Theory Co.</h1>
+            <NavLink className='logo-link' to='/'><h1 className="company-name">Lumi Theory Co.</h1></NavLink>
         </div>
         <div className="nav-user">
             <i className="fas fa-user"></i>
