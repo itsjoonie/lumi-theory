@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Footer.css'
 
 function Footer () {
@@ -7,8 +8,12 @@ function Footer () {
         <div className='footer'>
             <p><i class="far fa-copyright"></i> Lumi Theory Studio Co.</p>
             <div className='connect-info'>
-                <i class="fab fa-github"></i>
-                <i class="fab fa-linkedin"></i>
+                <a className='footerLink' href='https://github.com/itsjoonie/lumi-theory' target='_blank' rel='noreferrer'>
+                    <i class="fab fa-github"></i>
+                </a>
+                <a className='footerLink' href='https://www.linkedin.com/in/itisjun/' target='_blank' rel='noreferrer'>
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
 
         </div>
