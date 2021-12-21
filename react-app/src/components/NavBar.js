@@ -27,9 +27,9 @@ const NavBar = () => {
             <div className="dropdown-content">
               <NavLink className="dropdown-links" to="/">Home</NavLink>
               <NavLink className="dropdown-links" to="/all/products">Shop</NavLink>
-              <NavLink className="dropdown-links" to="#">Events</NavLink>
-              <NavLink className="dropdown-links" to="#">Our Story</NavLink>
-              <NavLink className="dropdown-links" to="#">Contact Us</NavLink>
+              <NavLink className="dropdown-links" to="/events">Events</NavLink>
+              {/* <NavLink className="dropdown-links" to="#">Our Story</NavLink> */}
+              <NavLink className="dropdown-links" to="/contact">Contact Us</NavLink>
             </div>
         </div>
         <div className="nav-search">

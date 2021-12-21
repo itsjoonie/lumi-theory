@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useParams} from 'react-router-dom'
+import {NavLink, useParams} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import './IndividualProductPage.css'
 import ReviewSection from '../Reviews/ReviewSection';
@@ -55,10 +55,20 @@ const totalRating = () => {
 
     return (
         <div className='individual-product-page'>
-        {/* <div>Maybe the navigation section here?</div> */}
-
+   
         {/* picture section */}
              <div>
+                 <div className='navlinks-for-product-page'>
+                     <NavLink className='navlinks-top' to='/'>
+                        <p className='links-for-nav previous'>home</p>
+                     </NavLink>
+                     <i className="fas fa-chevron-right"></i>
+                     <NavLink className='navlinks-top' to='/all/products'>
+                        <p className='links-for-nav previous'>shop </p>
+                     </NavLink>
+                     <i class="fas fa-chevron-right"></i>
+                     <p className='links-for-nav'>{product.name}</p>
+                 </div>
                 <div className='individual-product-container'>
                     <div className='individual-candle-pictures'>
                         <div className='display-candle-pic'>

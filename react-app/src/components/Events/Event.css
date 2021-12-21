@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+.events {
+
+    margin: auto;
+    background-image: url('https://i.pinimg.com/originals/64/b3/e6/64b3e62460af5bd33000a4291edd1cc8.gif');
+    height: 100vh;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.events h1{
+    font-family: 'Pushster', cursive;
+    padding-top: 100px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2.5rem;
+
+    -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 8s; /* Firefox < 16 */
+        -ms-animation: fadein 8s; /* Internet Explorer */
+         -o-animation: fadein 8s; /* Opera < 12.1 */
+            animation: fadein 8s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

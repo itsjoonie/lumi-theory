@@ -15,7 +15,7 @@ import ProductsPage from './components/Products/ProductsPage';
 import ReviewSection from './components/Reviews/ReviewSection';
 import IndividualProductPage from './components/Products/IndividualProductPage';
 import StarRating from './components/Reviews/StarRating/StarRating';
-
+import Event from './components/Events/Event';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -59,8 +59,11 @@ function App() {
         <Route path='/product/:id' exact={true}>
           <IndividualProductPage/>
         </Route>
-        <Route path='/star' exact={true}>
-          <StarRating/>
+        <Route path='/events' exact={true}>
+          <Event />
+        </Route>
+        <Route path='/contact' exact={true}>
+
         </Route>
       </Switch>
     </BrowserRouter>
