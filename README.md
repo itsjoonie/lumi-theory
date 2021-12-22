@@ -1,6 +1,6 @@
 # Lumi Theory Co. 
 
-Lumi Theory Co. is an e-commerce application for my handcrafted, eco-friendly candles. This full stack app is inspired by my passion for making things happen. This app will continuously be develop. Check out what I have built so far! 
+Lumi Theory Co. is an e-commerce application for my handcrafted, eco-friendly candles. This full stack app is inspired by my passion for making things happen. This app will be continuously be developing. Check out what I have built so far! 
 
 * live demo: [Lumi Theory Co.](https://lumitheory.herokuapp.com/)
 
