@@ -24,8 +24,8 @@ function Sidebar() {
   return (
     <div className='sidebar'>
             <Link to='#' className='cart-icon'>
-                <i class="fas fa-shopping-cart" onClick={showSidebar}></i>
-                <span>{` `}</span>({cart.length ? cart.length : 0})
+                <i class="fas fa-shopping-cart" onClick={showSidebar}>
+                <span>{` `}</span>({cart.length ? cart.length : 0})</i>
             </Link>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items' >
