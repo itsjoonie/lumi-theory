@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom';
+import { NavLink, Redirect, useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
 
 const SignUpForm = () => {
@@ -47,61 +47,81 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
-      <div>
-            <div class="login-form-control">
-                <label for="firstname">First Name</label>
-                <input
-                  type='text'
-                  placeholder='first name'
-                  value={firstName}
-                  onChange={updateFirstName}
-                />
-                <small>{errors.email}</small>
-		        </div>
-            <div class="login-form-control">
-                <label for="lastname">First Name</label>
-                <input
-                  type='text'
-                  placeholder='last name'
-                  value={lastName}
-                  onChange={updateLastName}
-                />
-                <small>{errors.email}</small>
-		        </div>
-            <div class="login-form-control">
-                <label for="email">Email</label>
-                <input
-                  name='email'
-                  type='text'
-                  placeholder='email name'
-                  value={email}
-                  onChange={updateEmail}
-                />
-                <small>{errors.email}</small>
-		        </div>
-            <div class="login-form-control">
-              <label for="username">Password</label>
-              <input name='password'
-                type='password'
-                placeholder='Password'
-                value={password}
-                onChange={updatePassword}/>
-              <small>{errors.password}</small>
-            </div>
-            <div class="login-form-control">
-              <label for="username">Confirm Password</label>
-              <input name='password'
-                type='password'
-                onChange={updateRepeatPassword}
-                value={repeatPassword}
-                required={true}
-                />
-              <small>{errors.password}</small>
-            </div>
-            <button className='login-btn' type='submit'>Signup</button>
+        <div className='sign-up-auth-container'>
+          <div className='signup-login-container'>
+                <div className='login-banner'>
+                <div className='login-banner-words'>
+                  <div className='banner-words'>
+                    <h1>Welcome</h1>
+                    <h1>to</h1>
+                    <h1>Lumi Theory</h1>
+                  </div>
+                </div>
+              </div>
+            <div className='login-container'>
+              <form  className='login-form' onSubmit={onSignUp}>
+                <h1>Sign Up</h1>
+         
+                  <div class="login-form-control">
+                      <label for="first name">First Name</label>
+                      <input
+                        name='email'
+                        type='text'
+                        placeholder='first name'
+                        value={firstName}
+                        onChange={updateFirstName}
+                      />
+                      <small>{errors.email}</small>
+                  </div>
+                  <div class="login-form-control">
+                      <label for="last name">Last Name</label>
+                      <input
+                        name='email'
+                        type='text'
+                        placeholder='last name'
+                        value={lastName}
+                        onChange={updateLastName}
+                      />
+                      <small>{errors.first_name}</small>
+                  </div>
+                  <div class="login-form-control">
+                    <label for="email">email</label>
+                    <input name='email'
+                      type='email'
+                      placeholder='email'
+                      value={email}
+                      onChange={updateEmail}/>
+                    <small>{errors.password}</small>
+                  </div>
+                  <div class="login-form-control">
+                    <label for="Lastname">Password</label>
+                    <input name='password'
+                      type='password'
+                      placeholder='Password'
+                      value={password}
+                      onChange={updatePassword}/>
+                    <small>{errors.password}</small>
+                  </div>
+                  <div class="login-form-control">
+                    <label for="Lastname">Confirm password</label>
+                    <input name='password'
+                      type='password'
+                      placeholder='Password'
+                      value={repeatPassword}
+                      onChange={updateRepeatPassword}/>
+                    <small>{errors.password}</small>
+                  </div>
+                  <button className='login-btn' type='submit'>Create Account</button>
+                  <hr className='line-seperator' />
+              </form>
+            
+              <div className='or-login-as'>
+                <p id='or'>or</p>
+              </div>
+              <div className='loginLink'>Have an account? <NavLink className='have-an-account' to='/login'> log in</NavLink></div>
+          </div>
         </div>
-    </form>
+      </div>
   );
 };
 
