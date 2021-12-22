@@ -36,7 +36,7 @@ Lumi Theory Co. is an e-commerce application for my handcrafted, eco-friendly ca
 <img src='./images/cartpage.png' width='380' height='300' />
 
 
-### Upcoming Implementation & Functionality 
+## Upcoming Implementation & Functionality 
 * Search bar
 * User's dashboard
 
