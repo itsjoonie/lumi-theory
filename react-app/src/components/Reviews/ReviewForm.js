@@ -32,11 +32,19 @@ function ReviewForm ({onClose}) {
         ))
         if(data.errors){
             setErrors(data.errors)
+        } else {
+            clearForm()
+            onClose()
         }
-
-        onClose()
+        
     }
     
+    function clearForm (){
+        setTitle('')
+        setRating(null)
+        setBody('')
+        
+    }
     
     return (
         <>

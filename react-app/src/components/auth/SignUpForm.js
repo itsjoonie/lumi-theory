@@ -4,9 +4,9 @@ import { NavLink, Redirect, useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
 
 const SignUpForm = () => {
-  const [errors, setErrors] = useState([]);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [errors, setErrors] = useState('');
+  const [first_name, setFirst_name] = useState('');
+  const [last_name, setLast_name] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -16,18 +16,23 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(firstName, lastName, email, password));
+      const data = await dispatch(signUp(first_name, last_name, email, password));
       if (data) {
+        console.log(data, "HRLLLLOOOOOOOOOOOOO")
         setErrors(data)
       }
+    }  else if (password !== repeatPassword) {
+        setErrors({passMatch: 'Passwords do not match.'})
+      
     }
   };
 
+
   const updateFirstName = (e) => {
-    setFirstName(e.target.value);
+    setFirst_name(e.target.value);
   };
   const updateLastName = (e) => {
-    setLastName(e.target.value);
+    setLast_name(e.target.value);
   };
 
   const updateEmail = (e) => {
@@ -61,17 +66,16 @@ const SignUpForm = () => {
             <div className='login-container'>
               <form  className='login-form' onSubmit={onSignUp}>
                 <h1>Sign Up</h1>
-         
                   <div class="login-form-control">
                       <label for="first name">First Name</label>
                       <input
                         name='email'
                         type='text'
                         placeholder='first name'
-                        value={firstName}
+                        value={first_name}
                         onChange={updateFirstName}
                       />
-                      <small>{errors.email}</small>
+                      {errors.first_name ? <small className='errors'>{errors.first_name} </small> : null }
                   </div>
                   <div class="login-form-control">
                       <label for="last name">Last Name</label>
@@ -79,19 +83,19 @@ const SignUpForm = () => {
                         name='email'
                         type='text'
                         placeholder='last name'
-                        value={lastName}
+                        value={last_name}
                         onChange={updateLastName}
                       />
-                      <small>{errors.first_name}</small>
+                      {errors.last_name ? <small className='errors'>{errors.last_name} </small> : null }
                   </div>
                   <div class="login-form-control">
-                    <label for="email">email</label>
+                    <label for="email">Email</label>
                     <input name='email'
                       type='email'
                       placeholder='email'
                       value={email}
                       onChange={updateEmail}/>
-                    <small>{errors.password}</small>
+                    {errors.email ? <small className='errors'>{errors.email} </small> : null }
                   </div>
                   <div class="login-form-control">
                     <label for="Lastname">Password</label>
@@ -100,16 +104,17 @@ const SignUpForm = () => {
                       placeholder='Password'
                       value={password}
                       onChange={updatePassword}/>
-                    <small>{errors.password}</small>
+                      <small className='errors'>{errors.password ? <p>{errors.password} </p> : null }</small>
+                    {/*  */}
                   </div>
                   <div class="login-form-control">
-                    <label for="Lastname">Confirm password</label>
+                    <label for="Lastname">Confirm Password</label>
                     <input name='password'
                       type='password'
                       placeholder='Password'
                       value={repeatPassword}
                       onChange={updateRepeatPassword}/>
-                    <small>{errors.password}</small>
+                    <small className='errors'>{errors.passMatch? <p>{errors.passMatch} </p> : null }</small>
                   </div>
                   <button className='login-btn' type='submit'>Create Account</button>
                   <hr className='line-seperator' />
