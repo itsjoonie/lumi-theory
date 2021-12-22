@@ -1,3 +1,47 @@
+# Lumi Theory Co. 
+
+Lumi Theory Co. is an e-commerce application for my handcrafted, eco-friendly candles. This fullstack app is inspired by my passion of making things happen. It is a work inprogress project. Check out what I have build so far! 
+
+* live demo: https://lumitheory.herokuapp.com/
+
+## Technologies 
+* Here are the main technologies used to built this application.
+    *  Backend: Python, Flask, WTForms, SQLAlchemy, PostgreSQL 
+    * Frontend: Javascript, React/Redux, CSS3
+
+## Site Walkthrough
+
+* This is the splash page. You can choose to sign-up for new user, login for current user, or be a demo user.     
+<img src='./images/homepage.jpg' width='380' height='300' />
+
+* User can log in or log in as demo via the login page.   
+<img src='./images/loginpage.png' width='380' height='300' />
+
+* User can sign up for an account via the sign up page.  
+<img src='./images/signuppage.png' width='380' height='300' />
+
+* User can view all the products on this page.
+<img src='./images/productspage.png' width='380' height='300' />
+
+* User can view a selected product details on the product's individual page.
+<img src='./images/productpage.png' width='380' height='300' />
+
+* User can see the review of each product.
+<img src='./images/reviewpage.png' width='380' height='300' />
+
+* Logged in user can leave a review.
+<img src='./images/addreviewpage.png' width='380' height='300' />
+
+* User can add items to cart and make purchase
+<img src='./images/cartpage.png' width='380' height='300' />
+
+
+### Upcoming Implementation & Functionality 
+* Search bar
+* User's dashboard
+
+
+
 # Flask React Project
 
 This is the starter for the Flask React project.
@@ -132,4 +176,4 @@ of your Heroku app in the url and tag name:
    ```bash=3
    docker push registry.heroku.com/{NAME_OF_HEROKU_APP}/web
    ```
-# lumi-theory
+
