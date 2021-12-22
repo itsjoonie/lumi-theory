@@ -52,9 +52,11 @@ const LoginForm = () => {
           <div className='login-banner'>
             <div className='login-banner-words'>
               <div className='banner-words'>
-                <h1>Welcome back</h1>
-                <h1>to</h1>
-                <h1>Lumi Theory</h1>
+                <div>
+                  <h1>Welcome back</h1>
+                  <h1>to</h1>
+                  <h1>Lumi Theory</h1>
+                </div>
               </div>
             </div>
           </div>
@@ -64,6 +66,7 @@ const LoginForm = () => {
          
                   <div class="login-form-control">
                       <label for="username">Email</label>
+                      <i class="far fa-envelope"></i>
                       <input
                         name='email'
                         type='text'
@@ -71,16 +74,17 @@ const LoginForm = () => {
                         value={email}
                         onChange={updateEmail}
                       />
-                      <small>{errors.email}</small>
+                      <small className='errors'>{errors.email}</small>
                   </div>
                   <div class="login-form-control">
-                    <label for="username">Password</label>
+                    <label for="password">password</label>
+                    <i class="fas fa-unlock-alt"></i>
                     <input name='password'
                       type='password'
                       placeholder='Password'
                       value={password}
                       onChange={updatePassword}/>
-                    <small>{errors.password}</small>
+                    <small className='errors'>{errors.password}</small>
                   </div>
                   <button className='login-btn' type='submit'>Log in</button>
                   <hr className='line-seperator' />

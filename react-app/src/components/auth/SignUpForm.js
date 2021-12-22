@@ -57,9 +57,11 @@ const SignUpForm = () => {
                 <div className='login-banner'>
                 <div className='login-banner-words'>
                   <div className='banner-words'>
+                    <div>
                     <h1>Welcome</h1>
                     <h1>to</h1>
                     <h1>Lumi Theory</h1>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -68,6 +70,7 @@ const SignUpForm = () => {
                 <h1>Sign Up</h1>
                   <div class="login-form-control">
                       <label for="first name">First Name</label>
+                      <i className="far fa-user-circle"></i>
                       <input
                         name='email'
                         type='text'
@@ -79,8 +82,9 @@ const SignUpForm = () => {
                   </div>
                   <div class="login-form-control">
                       <label for="last name">Last Name</label>
+                      <i className="far fa-user-circle"></i>
                       <input
-                        name='email'
+                        name='last name'
                         type='text'
                         placeholder='last name'
                         value={last_name}
@@ -90,6 +94,7 @@ const SignUpForm = () => {
                   </div>
                   <div class="login-form-control">
                     <label for="email">Email</label>
+                    <i class="far fa-envelope"></i>
                     <input name='email'
                       type='email'
                       placeholder='email'
@@ -98,7 +103,8 @@ const SignUpForm = () => {
                     {errors.email ? <small className='errors'>{errors.email} </small> : null }
                   </div>
                   <div class="login-form-control">
-                    <label for="Lastname">Password</label>
+                    <label for="Lastname">password</label>
+                    <i class="fas fa-unlock-alt"></i>
                     <input name='password'
                       type='password'
                       placeholder='Password'
@@ -109,6 +115,7 @@ const SignUpForm = () => {
                   </div>
                   <div class="login-form-control">
                     <label for="Lastname">Confirm Password</label>
+                    <i class="fas fa-unlock-alt"></i>
                     <input name='password'
                       type='password'
                       placeholder='Password'
