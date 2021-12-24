@@ -29,5 +29,22 @@
     width: 8.07rem;
     height: 2rem;
     margin-bottom: 10px;
+    transition: 220ms;
 
+}
+
+.addToCart-btn:hover{
+    border: 2px solid #edb831;
+    background-color: #fcf7eb;
+    color: black;
+    box-shadow: 3px 3px 3px rgb(189, 189, 189);
+    transition: 300ms;
+}
+
+.addToCart-btn:focus{
+    border: 3px solid #2a9d8f;
+    background-color: #f4f4f4;
+    color: black;
+    font-size: 0.90rem;
+    font-weight: bold;
 }

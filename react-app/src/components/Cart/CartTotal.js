@@ -59,7 +59,7 @@ function CartTotal () {
     
             </div>
             { carts.length > 0 ? 
-            <button onClick={purchase}><i class="fas fa-lock"></i>Checkout</button>
+            <button onClick={purchase} className='checkout-button'><i className="fas fa-lock"></i>Checkout</button>
             :
             <div></div>
             }

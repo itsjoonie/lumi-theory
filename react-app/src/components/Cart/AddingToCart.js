@@ -1,9 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useSelector } from "react-redux"
 
 import * as cartAction from '../../store/cart'
 
 import './AddingToCart.css'
+
+    
 
 function AddingToCart ({product}) {
 
@@ -35,6 +37,17 @@ function AddingToCart ({product}) {
             cart
         )
 
+    useEffect(() => {
+        let btn = document.getElementsByClassName('addToCart-btn')[0]
+        btn.addEventListener('click', ()=>{
+            setTimeout(()=>{
+                btn.innerText = 'Added!✔️'
+            }, 500)
+            
+        })
+    })
+
+
     return (
             <div>
                 <div className='quantity-buttons'>
@@ -55,7 +68,13 @@ function AddingToCart ({product}) {
                
             </div>
         )
+    
 }
 
+
+
+
+
 export default AddingToCart
+
 
