@@ -8,24 +8,44 @@ import CartTotal from './CartTotal.js';
 import CartItem from './CartItem.js';
 
 
+
+
 function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
   const cart = Object.values(useSelector(state => state.cart))
-  console.log(cart, "cart ins idebar")
+  
+  // const totalQuantity = () =>{
+  //   const num = [0]
+  //       cart.map(item => {
+  //           let total = item.quantity
+  //           num.push(total)
+  //       })
+  //       let addTotals = num.reduce(function(acc, curr){
+  //           return acc + curr
+  //       })
+  //       return addTotals
+  // }
 
-
-
-
-
+  function totalQuantity () {
+    const num = [0]
+        cart.map(item => {
+            let total = item.quantity
+            num.push(total)
+        })
+        let addTotals = num.reduce(function(acc, curr){
+            return acc + curr
+        })
+        return addTotals
+  }
 
 
   return (
     <div className='sidebar'>
             <Link to='#' className='cart-icon'>
                 <i class="fas fa-shopping-cart" onClick={showSidebar}>
-                <span>{` `}</span>({cart.length ? cart.length : 0})</i>
+                <span>{` `}</span>({totalQuantity() ? totalQuantity() : 0})</i>
             </Link>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items' >
@@ -33,7 +53,7 @@ function Sidebar() {
                 <Link to='#' className='menu-bars'>
                     <i class="fas fa-arrow-circle-right" onClick={showSidebar}></i>
                 </Link>
-                   <h1 className='cart-header'>My Cart ({cart.length})</h1>
+                   <h1 className='cart-header'>My Cart ({totalQuantity()})</h1>
                 </li>
                
                 <div className='itemsInCart-container'>

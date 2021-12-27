@@ -17,7 +17,6 @@ function CartTotal () {
         const num = [0]
         carts.map(item => {
             let total = item.quantity*item.price
-            console.log(total, "WHAT IS THIS TOTALLLLL")
             num.push(total)
         })
         let addTotals = num.reduce(function(acc, curr){

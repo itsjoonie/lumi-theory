@@ -4,15 +4,17 @@ import { Link } from "react-router-dom"
 import * as cartAction from '../../store/cart'
 
 function CartItem ({item}) {
-    // console.log(item, "what is this stuff")
-    // const [quantity, setQuantity] = useState(item.quantity)
-    // const cart = useSelector(state => state.cart)
-    // console.log(quantity, "WHAT IS QUANITITYYYYYYY")
+    console.log(item, "what is this stuff")
+    const [quantity, setQuantity] = useState(item.quantity)
+    const cart = useSelector(state => state.cart)
+    console.log(quantity, "WHAT IS QUANITITYYYYYYY")
 
-    // const addQuantity = (e) => {
-    //     e.preventDefault()
-    //     setQuantity(quantity + 1)
-    // }
+    const addQuantity = (e) => {
+        e.preventDefault()
+        setQuantity(quantity + 1)
+    }
+
+
 
     
 
