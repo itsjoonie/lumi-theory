@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {NavLink, useParams} from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './ReviewSection.css';
-import '../../store/review'
+import * as reviewAction from '../../store/review'
 import Modal from '../Modal/Modal';
 import ReviewForm from './ReviewForm';
 import RatingDisplay from '../Products/RatingDisplay/RatingDisplay';
@@ -14,6 +14,7 @@ const BUTTON_WRAPPER_STYLES = {
 }
 
 function ReviewSection ({product_id}){
+    const dispatch = useDispatch()
     const reviews = Object.values(useSelector((state)=>(state.review)))
     const sessionUser= useSelector(state => state.session.user?.id);
     console.log(sessionUser, "WHAT IS THIS")
@@ -30,7 +31,10 @@ function ReviewSection ({product_id}){
         return num.length
     }
 
-    
+    const handleDelete = (e) => {
+        console.log( e.currentTarget.id, "WHAT IS MY TARGET ID PLS")
+        dispatch(reviewAction.deleteOneReview(e.currentTarget.id))
+    }
 
     return(
         <div className='review-section'>
@@ -77,8 +81,7 @@ function ReviewSection ({product_id}){
                             <p>{review.body}</p>
                             <p className='deleteorDelete'>{ sessionUser === review.user_id ? 
                                 <div className='deleteEdit'>
-                                    <div>delete<span className='deleteOr'>or</span></div>
-                                    <div>edit</div>
+                                    <div><p id={review?.id} onClick={handleDelete}>delete</p></div>
                                 </div>
                                 :
                                 

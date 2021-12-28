@@ -46,7 +46,6 @@ export const createReview = (user_id, product_id, title, rating, body ) => async
 
     })
     const data = await res.json();
-    console.log(data, "THIS IS DATA WHAT")
     if(res.ok){
         dispatch(addReview(data))
         return data
@@ -55,6 +54,15 @@ export const createReview = (user_id, product_id, title, rating, body ) => async
         return data
     }
 }
+
+export const deleteOneReview = (id) => async(dispatch) => {
+    const res = await fetch(`api/reviews/${id}`, {
+        method: 'DELETE'
+    })
+    dispatch(deleteReview(id))
+}
+
+
 
 const initialState ={};
 
@@ -68,6 +76,9 @@ const reviewReducer = (state = initialState, action) =>{
             }
         case ADD_REVIEW:
             newState[action.review.id] = action.review
+            return newState
+        case DELETE_REVIEW:
+            delete newState[action.reviewId]
             return newState
         default:
             return state

@@ -32,30 +32,13 @@ def create_review ():
     else:
         return {'errors':form.errors}, 500
 
-@review_routes.route('/<int:id>', methods = ['PUT', 'DELETE'])
+@review_routes.route('/<int:id>', methods = ['DELETE'])
 @login_required
 def update_review(id):
     review = Review.query.get(id)
-
-    if request.method == 'GET':
-        form = ReviewEditForm()
-        form['csrf_token'].data = request.cookies['csrf_token']
-        if form.validate_on_submit():
-            
-            review.user_id=form.data['user_id']
-            review.product_id=form.data['product_id']
-            review.title=form.data['title']
-            review.rating=form.data['rating']
-            review.body=form.data['body']
-            db.session.add(review)
-            db.session.commit()
-            return review.to_dict()
-        else:
-            return {'errors':form.errors}, 500
-    
-    elif request.method == 'DELETE':
-        db.session.delete(review)
-        db.session.commit()
-        return {'message': 'Review Deleted'}
+    print(review, "YHFDFFJKBKHKHKHKHLJJKJKJKJKJJKKJKK")
+    db.session.delete(review)
+    db.session.commit()
+    return {'message': 'Review Deleted'}
 
 
