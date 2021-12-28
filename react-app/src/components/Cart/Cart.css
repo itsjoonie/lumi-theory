@@ -150,7 +150,6 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin-bottom: 15px;
   gap: 15px;
   padding-right: 5px;
 }
@@ -160,6 +159,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.remove-item{
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.remove-item:hover{
+  cursor: pointer;
+}
 
 .fa-cart-plus{
   font-size: 8rem;

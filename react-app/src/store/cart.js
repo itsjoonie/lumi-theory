@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux"
 
 const LOAD_CART = 'cart/LOAD_CART'
-const ADD_TO_CART = 'cart/ADD_TO_CART'
 const REMOVE_FROM_CART ='cart/REMOVE_FROM_CART'
 const RESET_CART = 'cart/RESET_CART'
 
@@ -12,10 +11,7 @@ const loadCart = (cart) => ({
     cart
 })
 
-const addToCart = (item) => ({
-    type: ADD_TO_CART,
-    item
-})
+
 
 const removeFromCart = (itemId) => ({
     type: REMOVE_FROM_CART,
@@ -76,8 +72,9 @@ export const useChangeQuantity = (productId, cart, action) => {
 export const useDeleteItem = (productId, cart) => {
     const dispatch = useDispatch ()
     return async function () {
-        await dispatch(removeFromCart(productId));
+        await dispatch(removeFromCart(cart[productId]));
         delete cart[productId]
+        await dispatch(loadCart(cart))
         saveCart(cart)
     }
 }

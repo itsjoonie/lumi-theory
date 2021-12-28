@@ -5,11 +5,11 @@ import * as cartAction from '../../store/cart'
 
 function CartItem ({item}) {
     console.log(item.quantity, "what is this stuff")
-    const [quantity, setQuantity] = useState(item.quantity)
     const cart = useSelector(state => state.cart)
 
     const addItem = cartAction.useChangeQuantity(item.productId, cart, 1)
     const subtractItem = cartAction.useChangeQuantity(item.productId, cart, 0)
+    const deleteItem = cartAction.useDeleteItem(item.productId, cart)
     
 
 
@@ -50,13 +50,18 @@ function CartItem ({item}) {
                 </div>
             </div>
             <div className='item-total-price'>
-                    <div>
+                <div>
                     <h3>Total:</h3>
-                    </div>
-                    <div>
-                    <h3><span>$</span>{item.price*item.quantity}</h3>
-                    </div>
                 </div>
+                <div>
+                    <h3><span>$</span>{item.price*item.quantity}</h3>
+                </div>
+            </div>
+            <div className='remove-item'>
+                <div>
+                <p onClick={deleteItem}>remove</p>
+                </div>
+            </div>
             <hr className='item-divider'/>
         </div>
                                
