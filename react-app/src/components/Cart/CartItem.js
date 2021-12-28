@@ -6,9 +6,10 @@ import * as cartAction from '../../store/cart'
 function CartItem ({item}) {
     console.log(item.quantity, "what is this stuff")
     const [quantity, setQuantity] = useState(item.quantity)
+    const cart = useSelector(state => state.cart)
 
-
-
+    const addItem = cartAction.useChangeQuantity(item.productId, cart, 1)
+    const subtractItem = cartAction.useChangeQuantity(item.productId, cart, 0)
     
 
 
@@ -34,15 +35,15 @@ function CartItem ({item}) {
                     <h2>Quantity:</h2>
                     </div>
                     <div className='item-add-subtract'>
-                    {/* <div>
-                        <button className='add-subtract-btn'><i className="fas fa-minus-circle add-sub-btn-img"></i></button>
-                    </div> */}
                     <div>
-                        <p className='item-quantity-amt'>{quantity}</p>
+                        <button className='add-subtract-btn' onClick={subtractItem}><i className="fas fa-minus-circle add-sub-btn-img"></i></button>
                     </div>
-                    {/* <div>
-                        <button className='add-subtract-btn'><i className="fas fa-plus-circle add-sub-btn-img"></i></button>
-                    </div> */}
+                    <div>
+                        <p className='item-quantity-amt'>{item.quantity}</p>
+                    </div>
+                    <div>
+                        <button className='add-subtract-btn' onClick={addItem}><i className="fas fa-plus-circle add-sub-btn-img"></i></button>
+                    </div>
                     </div>
                 </div>
                 

@@ -56,19 +56,21 @@ export const useAddItemToCart = (name, price, productId, pic1, quantity, cart) =
 
 }
 
-export const useSubtractItemToCart = (productId, cart) => {
+export const useChangeQuantity = (productId, cart, action) => {
     let dispatch = useDispatch()
         return async () => {
-            console.log(cart[productId], "WHATTTTTT")
-            if( cart[productId].quantity <= 1) {
-                delete cart[productId]
-            } else {
-                cart[productId].quantity -= 1
+            if(action) {
+                cart[productId].quantity+=1
+            } else{
+                if (cart[productId].quantity <= 1) {
+                    delete cart[productId]
+                } else {
+                    cart[productId].quantity -= 1
+                } 
             }
             await dispatch(loadCart(cart))
             saveCart(cart)
         }
-
 }
 
 export const useDeleteItem = (productId, cart) => {
@@ -103,10 +105,6 @@ const cartReducer = (state = initialState, action) => {
             return {
               ...action.cart
             };
-        case REMOVE_FROM_CART:
-            itemId = action.itemId
-            delete newState[itemId]
-            return newState
         case RESET_CART:
             return state = {}
       default: 
