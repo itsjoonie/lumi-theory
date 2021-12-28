@@ -4,15 +4,8 @@ import { Link } from "react-router-dom"
 import * as cartAction from '../../store/cart'
 
 function CartItem ({item}) {
-    console.log(item, "what is this stuff")
+    console.log(item.quantity, "what is this stuff")
     const [quantity, setQuantity] = useState(item.quantity)
-    const cart = useSelector(state => state.cart)
-    console.log(quantity, "WHAT IS QUANITITYYYYYYY")
-
-    const addQuantity = (e) => {
-        e.preventDefault()
-        setQuantity(quantity + 1)
-    }
 
 
 
@@ -45,7 +38,7 @@ function CartItem ({item}) {
                         <button className='add-subtract-btn'><i className="fas fa-minus-circle add-sub-btn-img"></i></button>
                     </div> */}
                     <div>
-                        <p className='item-quantity-amt'>{item.quantity}</p>
+                        <p className='item-quantity-amt'>{quantity}</p>
                     </div>
                     {/* <div>
                         <button className='add-subtract-btn'><i className="fas fa-plus-circle add-sub-btn-img"></i></button>
