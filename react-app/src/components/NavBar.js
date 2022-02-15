@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import Sidebar from './Cart/Cart';
 import './NavBar.css'
+import SearchBar from './SearchBar/SearchBar';
 
 const NavBar = () => {
 
@@ -35,9 +36,7 @@ const NavBar = () => {
               <NavLink className="dropdown-links" to="/contact">Contact Us</NavLink>
             </div>
         </div>
-        <div className="nav-search">
-          <i class="fas fa-search"></i>
-        </div>
+        <SearchBar/>
         <div className="logo">
             <NavLink className='logo-link' to='/'><h1 className="company-name">Lumi Theory Co.</h1></NavLink>
         </div>

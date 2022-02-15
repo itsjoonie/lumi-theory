@@ -1,0 +1,33 @@
+.search{
+    margin-left: 10px;
+
+}
+
+.searchInputs {
+    display: flex;
+    
+}
+
+
+
+.search-bar-input{
+    margin-left: 5px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0.755);
+}
+
+.fa-window-close{
+    color: white;
+}
+.fa-window-close:hover{
+    cursor: pointer;
+    color: rgb(220, 219, 219);
+}
+.dataResult{
+    position: absolute;
+    width: 150px;
+    background-color: whitesmoke;
+    margin-left: 21px;
+
+    
+}
